@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      시맨틱 태그와 레이아웃
+    </title>
+  </head>
+  <body>
+
+    <!--
+      또! 처음 보는 태그가 무더기로 등장했습니다.
+      이번 예제에서 레이아웃으로 사용된 Tag들은 시멘틱 태그(Semantic Tag)라고 불리며
+      <header>, <main>, <nav>, <section>, <footer> 등... 이 외에도 다양한 태그들이 있습니다.
+      시맨틱 태그라고 해서 특별한 무언가가 더 있는 것은 아닙니다.
+      쉽게 생각하면 그냥 다른이름을 가진 div태그라고 생각하시면 됩니다.
+      따라서 시맨틱 태그를 사용하지 않아도 웹페이지를 만드는데에는 아무런 지장이 없습니다.
+      그러나 현재 웹퍼블리싱/마크업 에서는 되도록 시맨틱 태그를 사용하도록 권장하고 있습니다.
+      왜 그럴까요?
+      시맨틱 태그는 태그 내의 컨텐츠가 어떤 성격을 가지고 있는지 유추할 수 있게 합니다.
+      예로, <header> 태그 안에는 컨텐츠의 제목이 포함되어 있을 가능성이 높겠죠.
+      이러한 장점은 어쩌면, 사람에게는 큰 의미가 없는지도 모릅니다.
+      하지만 검색엔진에게는 아주 큰 장점이 됩니다.
+      Naver, Google과 같은 검색엔진은 웹페이지를 탐색할 때 이러한 시맨틱 태그를 기준으로
+      웹페이지에 어떤 컨텐츠가 포함되어있는지 파악합니다.
+      내가 만든 웹페이지가 검색엔진에서 보다 효율적으로 사용자에게 노출되기를 바란다면,
+      시맨틱 태그를 적절히 활용하는 것이 좋겠죠?
+    -->
+
+    <header class="page-header">
+      홈페이지의 헤더
+    </header>
+    
+    <main>
+
+      <nav>
+        네비게이션
+      </nav>
+
+      <section>
+        컨텐츠
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      홈페이지의 푸터
+    </footer>
+
+  </body>
+</html>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height:100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+
+  main {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 720px;
+  }
+
+  main > nav {
+    border-right: 1px solid lightgrey;
+    flex-shrink: 0;
+    width: 220px;
+  }
+  main > section {
+    flex-grow: 1;
+    overflow-x: auto;
+  }
+
+  header.page-header {
+    flex-shrink: 0;
+    flex-basis: 120px;
+    border-bottom: 1px solid lightgrey;
+  }
+  footer.page-footer {
+    flex-shrink: 0;
+    flex-basis: 120px;
+    border-top: 1px solid lightgrey;
+  }
+</style>

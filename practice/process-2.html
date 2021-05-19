@@ -68,9 +68,9 @@
           </div>
           <div id="Hunee">
           </div>
-          <div class="description">
-            떡잎유치원은 짱구와 훈이의 부모입니다. 반대로 짱구와 훈이는 떡잎유치원의 자식입니다. 마지막으로 짱구와 훈이는 부모자식 관꼐가 아닌 친구입니다.
-          </div>
+        </div>
+        <div class="description">
+          떡잎유치원은 짱구와 훈이의 부모입니다. 반대로 짱구와 훈이는 떡잎유치원의 자식입니다. 마지막으로 짱구와 훈이는 부모자식 관꼐가 아닌 친구입니다.
         </div>
       </div>
 
@@ -184,6 +184,31 @@
     }
     .blue {
       color: blue;
+    }
+    #DDukNip {
+      background-color: #94e348;
+      padding: 16px;
+    }
+    #JJangGu {
+      position: relative;
+      background-color: #e40028;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 16px;
+    }
+    /* after는 가상선택자입니다. 어려워말고, 지금은 그저 이런게 있구나 하고 넘어가시면 됩니다. */
+    #JJangGu:after {
+      position: absolute;
+      background-color: #f1ee6f;
+      width: 100px;
+      height: 40px;
+      bottom: 0;
+      content: "";
+    }
+    #Hunee {
+      background-color: #b9f0e8;
+      width: 100px;
+      height: 100px;
     }
   </style>
 </html>

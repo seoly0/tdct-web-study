@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            HTML에 대하여
+        </title>
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <h2> &lt; HTML 작성하기 &gt;</h2>
+        <div>
+            HTML 문서는 태그와 정보로 구성되어 있습니다. 태그는 정보의 유형이나 속성 등을 나타내며, <br>
+            &lt;TAG&gt;정보&lt;/TAG&gt; 와 같은 형태로 표현됩니다.<br>
+            슬래쉬가 없는 앞쪽은 여는 태그라고 부르고, 슬래쉬가 있는 뒤쪽은 닫는 태그라고 부릅니다.<br>
+            정보는 단순한 텍스트가 될 수도 있으며, 또 다른 HTML tag일 수도 있습니다. <br>
+            정보가 포함되지 않은 특정 태그들은 닫는 태그를 사용하지 않아도 됩니다. 네. &lt;br&gt;태그처럼 말이죠. <br>
+            이제 HTML의 기본적인 구조를 정의하는 태그들에 대해 알아봅시다.
+        </div>
+
+        <ul>
+            <li>
+                &lt;html&gt;태그는 사용자에게 최종적으로 하나의 웹페이지를 제공하는 데 필요한 모든 정보를 포함하고 있는 최상위 태그입니다.
+            </li>
+            <li>
+                &lt;head&gt;태그는 웹페이지의 메타데이터를 기술하는 태그입니다. 메타데이터란, 데이터에 대한 데이터입니다. <br>
+                &lt;title&gt;, &lt;head&gt;, &lt;link&gt; 등의 태그들이  &lt;head&gt; 태그 안에서 사용됩니다.
+            </li>
+            <li>
+                &lt;title&gt; 태그는 &lt;head&gt;태그의 하위에 위치하며 웹페이지의 제목을 나타냅니다. 주로 브라우저의 탭에서 확인할 수 있습니다.
+            </li>
+            <li>
+                &lt;body&gt;태그는 웹페이지의 본문으로 실제로 웹페이지에 포함되어야 할 컨텐츠가 기술되며, 화면을 그리는 태그라고 할 수 있습니다.<br>
+                앞서 배운 &lt;li&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt; 등의 태그들은 모두 &lt;body&gt; 태그 안에서 사용됩니다.
+            </li>
+            <li>
+                &lt;style&gt;태그는 웹페이지의 스타일을 지정하는 태그로 웹페이지를 보다 사용자 친화적이며 아름답게 꾸밀 수 있게 합니다.
+            </li>
+            <li>
+                &lt;script&gt;태그는 웹페이지의 동작과 기능을 구현하는 태그로 사용자에게 더 다양한 상호작용을 제공합니다.
+            </li>
+        </ul>
+        </div>
+
+        <div>
+            <h2>HTML의 게층구조</h2>
+
+            <div>
+                HTML 태그들은 서로 계층적인 상관관계를 갖습니다. <br>
+                앞서 HTML tag의 정보는 또 다른 HTML tag 가 될 수 있다고 말씀드렸습니다. <br>
+                HTML tag 안에 다시 HTML tag가 포함되어 있다면 그 두 HTML tag는 부모자식 관계입니다. 
+            </div>
+            <div id="DDukNip">
+                <div id="JJangGU">
+                </div>
+                <div id="Hunee">
+                </div>
+            </div>
+            <div class="description">
+                떡잎유치원은 짱구와 훈이의 부모입니다. 짱구와 훈이는 떡잎유치원의 자식입니다. 그리고 짱구와 훈이는 부모자식관계가 아닌 친구입니다. 그런데 유치원과 원생의 관계는 부모자식이라기 보다는 포함관계가 아닌가요?
+            </div>
+        </div>
+
+        <div>
+            <h2>HTML의 Block요소와 Inline요소</h2>
+        <div>
+            <div>
+                우리는 앞서 DIV태그를 사용해보았습니다. <br>
+                div 태그는 html의 대표적인 block 요소입니다.
+            </div>
+            <div>
+                이 문장과
+              </div>
+            <div>
+                이 문장은
+            </div>
+            <div>
+                절대로 같은 라인에 위치할 수 없습니다. 블록요소이기 때문입니다.
+            </div>
+        </div>
+
+        <div>
+            <div class="orange">
+                그렇다면 만약 한 줄에
+            </div>
+            <div class="red">
+                각자 다른 스타일이
+            </div>
+            <div class="coral">
+                적용된 문장을 쓰고 싶다면
+            </div>
+            <div class="pink">
+                어떻게 해야 할까요?
+            </div>
+        </div>
+
+        <div>
+            <span class="orange">
+                그럴땐
+            </span>
+            <span class="red">span 태그를 </span>
+            <span class="coral">사용하면</span>
+            <span class="pink">됩니다.</span>
+        </div>
+
+        <div>
+            <div>
+                span은 펼쳐진다는 의미를 가지고 있습니다. <span class="bold">SPAN</span>태그는 HTML의 대표적인 Inline 요소입니다. <br>
+                Block 요소와 Inline 요소의 차이점이 느껴지나요?
+            </div>
+            <div>
+                block요소는 같은 계층의 그 어떤 다른 요소와도 같은 line에 표시되지 않습니다. 즉 line을 독점합니다.
+            </div>
+            <div>
+                반면 <span class="bold">Inline 요소</span>는 같은 계층의 다른 Inline 요소들과 Line을 공유합니다.<br>
+                br태그를 만나 강제 줄바꿈되거나, 혹은 문장이 너어ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ어무 길어서 요소의 최대 넓이를 초과하지 않는 한, <span>Inline</span>
+요소들은 서로 같은 라인에 있으려고 합니다.            
+            </div>
+        </div>
+        </div>
+
+        <div>
+            <h2>HTML 요소의 속성</h2>
+            <div>모든 html 요소들은 속성을 가지고 있습니다. 어느 태그에나 존재하는 공통적인 속성들도 있고, 특정 태그에만 존재하는 속성들도 있습니다.</div>
+            <div id="id" class="class">
+                많이 보신 id와 class도 물론 속성입니다.
+            </div>
+
+            <div>
+                <img
+                src="https://specials-images.forbesimg.com/imageserve/5e4d57aa6895e00006839b54/960x0.jpg?fit=scale"
+                alt="웁스!"
+                title="Rose Wylie">
+            </div>
+        </div>
+        </div>
+    </body>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        .comtainer {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        .pink {
+            color: pink;
+        }
+        .red {
+            color: rosybrown;
+        }
+        .orange {
+            color: salmon;
+        }
+        .coral {
+            color: coral;
+        }
+        .bold {
+            font-weight: 1000;
+        }
+        #DDukNip {
+            background-color: darkgreen;
+            padding: 16px;
+        }
+        #JJangGu {
+            position: relative;
+            background-color: #e40028;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 16px;
+        }
+        #JJangGu:after {
+            position: absolute;
+            background-color: #f1ee6f;
+            width: 100px;
+            height: 40px;
+            bottom: 0;
+            content: "하체";
+        }
+        #Hunee {
+            background-color: dodgerblue;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 16px;
+        }
+        #Hunee:after {
+            position: absolute;
+            background-color: #0d0e4d;
+            width: 100px;
+            height: 40px;
+            bottom: 0;
+            content: "하체";
+        }
+    </style>
+</html>

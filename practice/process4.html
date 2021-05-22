@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            시맨틱 태그와 레이아웃
+        </title>
+    </head>
+    <body>
+
+        <header class="page-header">
+            홈페이지의 헤더
+        </header>
+
+        <main>
+            <nav>
+                내비게이션
+            </nav>
+
+            <section>
+                컨텐츠
+            </section>
+        </main>
+
+        <footer class="page-footer">
+            홈페이지의 푸터
+        </footer>
+    </body>
+</html>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height:150%;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 1280px;
+        margin: 0 auto;
+        overflow-y: auto;
+    }
+    main {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 720px;
+    }
+    main > nav {
+        border-right:  1px solid lightpink;
+        flex-shrink: 0;
+        width: 220px
+    }
+    main >section {
+        flex-grow:  1;
+        overflow-x: auto;
+       
+    }
+    header.page-header {
+        flex-shrink: 0;
+        flex-basis: 120px;
+        border-bottom: 1px solid lightseagreen;
+    }
+    footer.page-footer {
+        flex-shrink: 0;
+        flex-basis: 120px;
+        border-top: 5px solid lavenderblush;
+    }
+</style>

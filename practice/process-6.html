@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Flex
+    </title>
+  </head>
+  <!-- 자 여기서부턴 마냥 쉽지는 않을 겁니다. -->
+  <!-- 하지만 익숙해지고나면 별거 아니었음을 깨달을 겁니다. -->
+  <!-- 여러번 따라하면서 익숙해져봅시다. -->
+  <body>
+    <div style="width: 1280px; margin: 0 auto;">
+
+      <div class="description">
+        두 개 이상의 요소를 아래 사진과 같이 수평으로 배치하고 싶습니다.
+      </div>
+
+      <figure>
+        <img src="flex.jpg" style="box-shadow: 0 0 4px grey;" />
+        <figcaption>이미지입니다.</figcaption>
+      </figure>
+
+      <div class="description">
+        같은 라인에 두 개 이상의 요소를 배치하는데에 Block 요소는 사용할 수 없습니다.<br>
+        Block 요소는 앞서 배운대로 Line을 공유하지 않고 독점하기 때문이죠.
+      </div>
+
+      <div id="나야나">
+        <div class="square">
+          Block
+        </div>
+        <div class="square">
+          Block
+        </div>
+      </div>
+
+      <div class="description">
+        그렇다면 Inline 요소는 어떨까요?
+        Inline 요소는 두 개 이상의 요소(Element)가 라인을 공유합니다.<br>
+        그런데 Inline 요소는 치명적인 단점이 있죠.
+      </div>
+      
+      <div>
+        <!-- square 라는 className으로 높이와 너비를 부여하였음! -->
+        <span class="square">
+          Inline
+        </span>
+        <span class="square">
+          Inline
+        </span>
+      </div>
+
+      <div class="description">
+        바로 자체적인 높이(height)와 너비(width)를 가질 수 없다는 점입니다.<br>
+        Inline요소는 자신만의 높이와 너비를 가질 수 없고 오로지 하위 요소(Child Element)에 따라 높이와 너비가 결정됩니다.
+      </div>
+
+      <div>
+        <!-- square라는 className으로 지정된 100px의 높이와 너비는 아무 의미가 없음! -->
+        <!-- 오로지 하위 요소인 텍스트가 차지하는 영역만큼만 커질 수 있음. -->
+        <span class="square">
+          이 요소는 글자가 많으므로 더 넓어집니다.
+        </span>
+        <span class="square" style="font-size: 48px;">
+          우뚝
+        </span>
+      </div>
+
+      <div class="description">
+        그렇다면 편법을 써보면 어떨까요?<br>
+        바깥 두 요소는 Inline 요소인 SPAN 태그를 사용하여 두 요소가 같은 라인에 위치하게끔 한 뒤,<br>
+        내부 요소는 Block 요소로 높이와 너비를 지정하는 겁니다.
+      </div>
+
+      <span>
+        <div class="square">
+          Block
+        </div>
+      </span>
+      <span>
+        <div class="square">
+          Block
+        </div>
+      </span>
+
+      <div class="description">
+        <!-- 인라인 요소 내부에 블록요소가 위치하게 되면 더 이상 인라인 요소가 아니게 됩니다. -->
+        결과는 대 실패.<br>
+        당연하지만 방법은 있습니다. 우선 Inline-Block 요소를 사용하는 겁니다. 이름만 들어도 뭔가 짬뽕이 된 듯한게 느껴지시죠?
+      </div>
+
+      <div>
+        <!-- div는 block요소, span은 inline 요소입니다만 이것은 기본값입니다. -->
+        <!-- css의 display 속성을 통해서 내가 원하는 타입의 요소로 만들 수 있습니다. -->
+        <!-- 즉, div가 inline 요소가 될 수도, span이 block 요소가 될 수도 있습니다. -->
+        <div class="square inline-block">
+          Block
+        </div>
+        <div class="square inline-block">
+          Block
+        </div>
+      </div>
+
+      <div class="description">
+        자 우선은 성공입니다. input, button, select 등의 태그가 대표적인 inline-block 요소입니다.<br>
+        inline-block 요소들은 inline 요소처럼 서로 수평으로 배치될 수 있습니다.<br>
+        사실 요소를 수평으로 배치하는 방법은 이말고도 더 있습니다.<br>
+        하지만 최근에 가장 많이 사용되는 방법은 바로 flex입니다.
+      </div>
+
+      <div class="flex">
+        <div class="square">
+          Block
+        </div>
+        <div class="square">
+          Block
+        </div>
+      </div>
+
+      <div class="description">
+        이번엔 서론이 길었네요.<br>
+        이번 예제에서는 flex를 연습해봅시다.<br>
+        PROCESS-3에서는 레이아웃을 table로, PROCESS-4에서는 flex로 만들었습니다.<br>
+        flex는 정말 많은 곳에서 사용되지만, layout을 만들 때 아주 유용합니다.<br>
+        table이 아니라, inline-block이 아니라, 굳이 flex로 layout을 만드는 이유는,<br>
+        웹을 반응형으로 제작하기에 flex가 적합하기 때문입니다.<br>
+        PROCESS-4에서는 맛보기로 간단히 따라해보았으니,<br>
+        이번 예제에서는 flex를 제대로 이해해봅시다.<br>
+        flex는 유연하다는 의미를 갖고 있습니다...만 span이 펼치다를 의미한다면, flex는 늘여뜨려 놓는다 정도의 느낌인 것 같습니다.
+      </div>
+
+      <!-- 여러 번 따라 작성하시는 경우 이 윗부분은 굳이 다시 하실 필요 없습니다. -->
+      <!-- 이 아래부터만 익숙해질 때까지 여러 번 따라해보세요. -->
+      <h1>
+        FLEX를 연습해보자.
+      </h1>
+
+      <div class="description">
+        우선 block과 flex를 비교해봅시다.
+      </div>
+
+      <div>
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="description">
+        block은 line을 점유합니다. 또한 자체적인 너비가 지정되어있지 않으면, 기본적으로 최대한 넓은 너비를 가지려고 합니다.<br>
+        물론 자체적인 너비를 지정한다고 해도 <a href="#나야나">위에서</a> 보았듯이 자기 혼자 line을 점유하는 것은 마찬가지입니다.
+      </div>
+
+      <div class="flex">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="description">
+        반면 flex는 inline 혹은 inline-block처럼 여러 요소가 같은 line에 위치하게 됩니다.<br>
+        기본적으로 너비, 높이가 지정되어있지 않으면 자식 요소의 너비와 높이에 맞추려고 하죠.
+      </div>
+
+      <h2>
+        FLEX의 방향
+      </h2>
+
+      <div class="description">
+        flex에는 방향이 있습니다. 가로로 flex하느냐(row), 세로로 flex하느냐(column) 인데요. flex의 기본 방향은 row입니다.<br>
+      </div>
+
+      <div class="flex row">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="description">
+        역방향도 존재합니다. 이게 무슨 쓸모인가 싶을 수 있지만 의외로! 쓸모가 있답니다.
+      </div>
+
+      <div class="flex row-reverse">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="description">
+        column은 어떨까요?
+      </div>
+
+      <div class="flex column">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <br>
+
+      <!-- 역방향! -->
+      <div class="flex column-reverse">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="description"> 
+        .... 이러면 block과 다른게 뭐죠???<br>
+        네 맞습니다. flex를 고작 이렇게 사용하려고 한다면 block과 다를게 딱히 없죠.<br>
+        앞서, flex는 layout 작성에 많이 사용된다고 말씀드렸었죠?
+      </div>
+
+      <h2>
+        FLEX GROW, FLEX SHRINK, FLEX BASIS
+      </h2>
+
+      <!-- 우측하단의 빗살무늬를 잡고 위 아래로 끌어보세요. -->
+      <div style="resize: vertical; height:500px; overflow: auto;">
+        <!-- 각각의 Item이 고정된 높이를 가지고 있어서 부모 요소의 크기에 반응하지 않습니다. -->
+        <div class="item" style="height: 100px;">
+          Item-1
+        </div>
+        <div class="item" style="height: 300px;">
+          Item-2
+        </div>
+        <div class="item" style="height: 100px;">
+          Item-3
+        </div>
+      </div>
+
+      <br>
+
+      <div class="flex column" style="resize: vertical; height:500px; overflow: auto;">
+        <!-- flex-shrink는 flex-basis값보다 더 작아질 수 있는지를 설정합니다. 1이면 작아질 수 있고, 0이면 작아질 수 없습니다. -->
+        <div class="item" style="flex-basis: 100px; flex-shrink: 0;">
+          Item-1
+        </div>
+        <!-- flex-grow는 flex-basis값보다 더 커질 수 있는지를 설정합니다. 1이면 커질 수 있고, 0이면 커질 수 없습니다. -->
+        <div class="item" style="flex-basis: 300px; flex-grow: 1;">
+          Item-2
+        </div>
+        <!-- flex를 사용하면 부모 요소의 크기에 반응하게끔 할 수 있습니다. -->
+        <div class="item" style="flex-basis: 100px; flex-shrink: 0;">
+          Item-3
+        </div>
+      </div>
+
+      <div class="description">
+        이제 차이가 느껴지시나요?<br>
+        flex는 유연하다는 그 의미처럼, 유연하게 늘어나고 줄어드는 것이 가능해서 반응형웹에 많이 사용됩니다.
+      </div>
+
+      <h2>
+        FLEX의 정렬
+      </h2>
+
+      <div class="description">
+        flex의 또다른 강력한 장점 중 하나는 정렬이 쉽다는 점입니다. 우선 수평 방법을 살펴봅시다.
+      </div>
+
+      <!-- flex-start는 기본값입니다. 수평 좌측 정렬입니다. -->
+      <div class="flex align-container" style="justify-content: flex-start;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <!-- 수평 우측 정렬입니다. -->
+      <div class="flex align-container" style="justify-content: flex-end;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <!-- 수평 가운데 정렬입니다. 가운데 정렬은 정말 언제나 유용합니다. -->
+      <div class="flex align-container" style="justify-content: center;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="flex align-container" style="justify-content: space-between;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="flex align-container" style="justify-content: space-around;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+      
+      <div class="flex align-container" style="justify-content: space-evenly;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <div class="description">
+        다음은 수직정렬 방법을 알아봅시다.
+      </div>
+
+      <!-- stretch는 기본값입니다. item의 높이를 flex container의 높이에 맞춥니다. -->
+      <div class="flex align-container" style="height:100px; align-items: stretch;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <!-- 수직 상단 정렬입니다. -->
+      <div class="flex align-container" style="height:100px; align-items: flex-start;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <!-- 수직 가운데 정렬입니다. 가운데 정렬은 언제나 유용합니다. 아주 유용하죠. -->
+      <div class="flex align-container" style="height:100px; align-items: center;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <!-- 수직 하단 정렬입니다. -->
+      <div class="flex align-container" style="height:100px; align-items: flex-end;">
+        <div class="item">
+          Item-1
+        </div>
+        <div class="item">
+          Item-2
+        </div>
+        <div class="item">
+          Item-3
+        </div>
+      </div>
+
+      <h2>
+        FLEX의 WRAP
+      </h2>
+
+      <div class="description">
+        마지막으로 wrap에 대해서 알아봅시다.<br>
+        wrap은 줄넘김이라는 뜻을 가지고 있습니다. 자식 요소들이 부모 요소의 크기를 넘어설 때, 줄넘김 여부에 대해 설정합니다.
+      </div>
+
+      <!-- nowrap은 기본값입니다. 줄바꿈을 하지 않습니다. 넘치는 컨텐츠는 그대로 빠져나가죠. -->
+      <div class="flex wrap-container" style="flex-wrap: nowrap;">
+        <div class="item" style="flex-basis: 300px; flex-shrink: 0;">
+          Item-1
+        </div>
+        <div class="item" style="flex-basis: 400px; flex-shrink: 0;">
+          Item-2
+        </div>
+        <div class="item" style="flex-basis: 300px; flex-shrink: 0;">
+          Item-3
+        </div>
+      </div>
+
+      <!-- wrap은 넘치는 컨텐츠를 아랫줄로 넘깁니다. -->
+      <div class="flex wrap-container" style="flex-wrap: wrap;">
+        <div class="item" style="flex-basis: 300px; flex-shrink: 0;">
+          Item-1
+        </div>
+        <div class="item" style="flex-basis: 400px; flex-shrink: 0;">
+          Item-2
+        </div>
+        <div class="item" style="flex-basis: 300px; flex-shrink: 0;">
+          Item-3
+        </div>
+      </div>
+
+      <!-- wrap-reverse는 넘치는 컨텐츠를 윗줄로 넘깁니다. -->
+      <div class="flex wrap-container" style="flex-wrap: wrap-reverse;">
+        <div class="item" style="flex-basis: 300px; flex-shrink: 0;">
+          Item-1
+        </div>
+        <div class="item" style="flex-basis: 400px; flex-shrink: 0;">
+          Item-2
+        </div>
+        <div class="item" style="flex-basis: 300px; flex-shrink: 0;">
+          Item-3
+        </div>
+      </div>
+
+      <!-- 우측 하단의 빗살무늬를 좌우로 끌어보세요. -->
+      <div class="flex wrap-container" style="flex-wrap: wrap; resize: horizontal; overflow: auto;">
+        <div class="item">
+          사나이 뚝베기
+        </div>
+        <div class="item">
+          고기 도둑
+        </div>
+        <div class="item">
+          만스 피자
+        </div>
+        <div class="item">
+          긴말하지 않겠다. 냉면&덮밥
+        </div>
+        <div class="item">
+          호야네
+        </div>
+        <div class="item">
+          맥도날드
+        </div>
+        <div class="item">
+          쉐프의 그릴
+        </div>       
+        <div class="item">
+          아이엠 돈까스
+        </div>
+        <div class="item">
+          스시쟁이
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
+
+<style>
+  .description {
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+  }
+  .square {
+    width: 98px;
+    height: 98px;
+    border: 1px solid blue;
+    background-color: yellow;
+  }
+  .item {
+    background-color: greenyellow;
+    border: 1px solid orange;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex.row {
+    flex-direction: row;
+  }
+  .flex.row-reverse {
+    flex-direction: row-reverse;
+  }
+  .flex.column {
+    flex-direction: column;
+  }
+  .flex.column-reverse {
+    flex-direction: column-reverse;
+  }
+  .align-container {
+    border: 1px solid grey;
+    margin-bottom: 10px;
+  }
+  .wrap-container {
+    width: 720px;
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+  }
+</style>

@@ -1,64 +1,31 @@
 <html>
     <head>
         <title>
-            Flex
+            가장 많이 사용되는 CSS 속성들
         </title>
     </head>
     <body>
-        <header class="page-header">
-            홈페이지의 헤더
-        </header>
-        <main>
 
-            <nav>
-                내비게이션
-            </nav>
+        <h1>
+            가장 많이 사용되는 CSS 속성들
+        </h1>
 
-            <section>
-                컨텐츠
-            </section>
-        </main>
-        <footer class="page-footer">
-            홈페이지의 푸터
-        </footer>
+        <div class="description">
+            CSS에서 가장 많이 사용되는 스타일 속성들<br>
+            기대됩니다<br>
+        </div>
+
+        <h2>
+            여백(padding)
+        </h2>
+
+        <div class="description">
+            padding은 부모 요소가 자식 요쇼를 배치하기 전, 먼저 일정 부분 공간을 차지하는 즉, 여백값입니다.
+        </div>
+
+        padding 없음
+        <div class="item" style="background-color: cornflowerblue;">
+        <div style="background-color: orangered;height:20px"></div>
+        </div>
     </body>
 </html>
-<style>
-    html.body {
-        margin: 7px;
-        padding: 0;
-        height: 200%;
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-        width: 1280px;
-        margin: 0 auto;
-        overflow-y: auto;
-    }
-    main {
-        display: flex;
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 720px;
-    }
-    main > nav {
-        border-right: 1px solid rgb(48, 34, 29);
-        flex-shrink: 0;
-        width: 100px;
-    }
-    main >section {
-        flex-grow: 1;
-        overflow-x: auto;
-    }
-    header.page-header {
-    flex-shrink: 0;
-    flex-basis: 120px;
-    border-bottom: 1px solid lightgrey;
-  }
-  footer.page-footer {
-      flex-shrink: 0;
-      flex-basis: 120px;
-      border-top: 1px solid peachpuff;
-  }
-</style>

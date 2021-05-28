@@ -1,135 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text-html; charset=UTF-8">
-        <title>2풀이</title>
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h2>HTML 작성하기</h2>
-                HTML문서는 태그와 정보로 구성되어 있습니다. 태그는 정보의 유형이나 속성 등을 나타내며,<br>
-                &lt;TAG&gt;정보&lt;/TAG&gt; 와 같은 형태로 표현됩니다.<br>
-                슬래쉬가 없는 앞쪽은 여는태그라고 부르고, 슬래쉬가 있는 뒷쪽은 닫는태그라고 부릅니다.<br>
-                정보는 단순한 텍스트가 될 수도 있으며, 또 다른 HTML tag일 수도 있습니다.<br>
-                정보가 포함되지 않는 특정 태그들은 닫는태그를 사용하지 않아도 됩니다. 네. &lt;br&gt; 태그처럼 말이죠.<br>
-                이제 HTML의 기본적인 구조를 정의하는 태그들에 대해 알아봅시다.<br>
-                <ul>
-                    <li>&lt;html&gt;태그는 사용자에게 최종적으로 하나의 웹페이지를 제공하는데 필요한 모든 정보를 포함하고 있는 최상위 태그입니다.</li>
-                    <li>&lt;head&gt;태그는 웹페이지의 메타데이터를 기술하는 태그입니다. 메타데이터란, 정확하게 번역하기는 어렵지만 보조적인 정보라고 생각하시면 됩니다.<br>&lt;title&gt;, &lt;meta&gt;, &lt;link&gt; 등의 태그들이 &lt;head&gt; 태그 안에서 사용됩니다.</li>
-                    <li>&lt;title&gt;태그는 &lt;head&gt;태그의 하위에 위치하며 웹페이지의 제목을 나타냅니다. 주로 브라우저의 탭에서 확인 할 수 있습니다.</li>
-                    <li>&lt;body&gt;태그는 웹페이지의 본문으로 실제로 웹페이지에 포함되어야 할 컨텐츠가 기술되며, 화면을 그리는 태그라고 할 수 있습니다.<br>앞서 배운 &lt;li&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt; 등의 태그들은 모두 &lt;body&gt; 태그 안에서 사용됩니다.</li>
-                    <li>&lt;style&gt;태그는 웹페이지의 스타일을 지정하는 태그로 웹페이지를 보다 사용자 친화적이며 아름답게 꾸밀 수 있게 합니다.</li>
-                    <li>&lt;script&gt;태그는 웹페이지의 동작과 기능을 구현하는 태그로 사용자에게 더 다양한 상호작용을 제공합니다.</li>
-                </ul>
-            </div>
-            <div>
-                <h2>HTML의 계층구조</h2>
-                <div>
-                    HTML 태그들은 서로 계층적인 상관관계를 갖습니다.<br>
-                    앞서 HTML tag의 정보는 또 다른 HTML tag가 될 수 있다고 말씀드렸습니다.<br>
-                    HTML tag 안에 다시 HTML tag가 포함되어 있다면 그 두 HTML tag는 부모자식 관계입니다.<br>
-                </div>
-                <div id="DDukNip">
-                    <div id="JJangGu"></div>
-                    <div id="Hunee"></div>          
-                    <div>
-                        떡잎유치원은 짱구와 훈이의 부모입니다. 반대로 짱구와 훈이는 떡잎유치원의 자식입니다. 마지막으로 짱구와 훈이는 부모자식 관꼐가 아닌 친구입니다.
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h2>HTML의 Block 요소와 Inline 요소</h2>
-                <div>
-                    <div>우리는 앞서 DIV태그를 사용해보았습니다.<br>DIV태그는 HTML의 대표적인 Block 요소입니다.</div>
-                    <div>이 문장과</div>
-                    <div>이 문장은</div>
-                    <div>절대로 같은 Line에 위치할 수 없습니다.</div>
-                </div>
-                <div>
-                    <div>
-                        <div class="violet">그렇다면 만약 한 줄에</div>
-                        <div class="red">각자 다른 스타일이</div>
-                        <div class="green">적용된 문장을 쓰고 싶다면</div>
-                        <div class="blue">어떻게 해야 할까요?</div>
-                    </div>
-                    <div>
-                        <span class="violet">그럴 땐 </span>
-                        <span class="red">SPAN 태그를 </span>
-                        <span class="green">사용하면 </span> 
-                        <span class="blue">됩니다.</span>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        span은 펼쳐진다는 의미를 갖고 있습니다. <span class="bold">SPAN</span>태그는 HTML의 대표적인 Inline 요소입니다.<br>
-                        Block 요소와 Inline 요소의 차이점이 느껴지시나요?
-                    </div>
-                    <div>
-                        Block 요소는 같은 계층의 그 어떤 다른 요소와도 같은 Line에 표시되지 않습니다. 즉 Line을 독점합니다.
-                    </div>
-                    <div>
-                        반면 <span class="bold">Inline 요소</span>는 같은 계층의 다른 Inline 요소들과 Line을 공유합니다.<br>
-                        BR태그를 만나 강제 줄바꿈되거나, 혹은 문장이 너어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어어무 길어서 요소의 최대 너비(width)를 초과하지 않는 한, <span>Inline</span> 요소들은 서로 같은 Line에 있으려고 합니다.
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h2>HTML 요소의 속성</h2>
-                <div>모든 HTML 요소들은 속성을 갖고 있습니다. 어느 태그에나 존재하는 공통적인 속성들도 있고, 특정 태그에만 존재하는 속성들도 있습니다.</div>
-                <dib id="" class="">많이 보신 id와 class도 물론 속성입니다.</dib> 
-                <div><a href="https://www.naver.com/">A 태그에 naver 홈페이지가 연결되도록 href 속성에 네이버 홈페이지 주소를 입력했습니다.</a></div>
-                <img src="./2_files/원하는 이미지 링크를 입력해보세요_" alt="이미지를 표시할 수 없을 떼 alt 속성에 입력한 텍스트가 대신 표시됩니다." tltle="마우스를 올리면 title 속성에 입력한 텍스트가 팝업됩니다.">
-            </div>
-        </div>
-    </body>
-    <style>
-        #DDukNip{
-			background-color: #94e348;
-			padding:16px;
-		}
-		#JJangGu{
-			position: relative;
-			background-color: #e40028;
-			width:100px;
-			height:100px;
-			margin-bottom:16px;
-		}
-		#JJangGu:after{
-			position:absolute;
-			background-color: #f1ee6f;
-			width:100px;
-			height:40px;
-			bottom:0;
-			content:"";
-		}
-		#Hunee{
-			background-color: #b9f0e8;
-			width:100px;
-			height:100px;
-		}
-		.container{
-            width: 1280px;
-            margin: 0 auto;
-        }
-        .violet{
-            color: violet;
-        }
-        .red{
-            color: red;
-        }
-        .green{
-            color: green;
-        }
-        .blue{
-            color: blue;
-        }
-		.bold{
-			font-weight: 700;
-		}
-        html, body {
-            padding:0;
-            margin:0;
-        }
-    </style>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3번풀이</title>
+</head>
+
+<body>
+    <table class="page-layout">
+        <tbody>
+
+            <tr>
+                <td class="page-header" colspan="2">홈페이지의 헤더</td>
+            </tr>
+
+            <tr class="page-main">
+                <td class="page-navigator">네비게이션</td>
+                <td class="page-content">컨텐츠</td>
+            </tr>
+
+            <tr>
+                <td class="page-footer" colspan="2">홈페이지의 푸터</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    body {
+        width: 1280px;
+        margin: 0 auto;
+        overflow-y: auto;
+    }
+    table.page-layout {
+        width:100%;
+        height:100%;
+    }
+    table.page-layout td{
+        vertical-align : top;
+    }
+    .page-main{
+        height: 720px;
+    }
+    .page-navigator {
+        width: 220px;
+        border-right: 1px solid lightgray;
+    }
+    .page-header{
+        height:120px;
+        border-bottom: 1px solid lightgrey;
+    }
+    .page-footer{
+        height:120px;
+        border-top: 1px solid lightgrey;
+    }
+</style>
+
 </html>

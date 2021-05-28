@@ -1,65 +1,59 @@
 <!DOCTYPE html>
+<!-- saved from url=(0050)https://seoly0.netlify.app/practice/process-4.html -->
 <html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<title>4풀이</title>
+  </head>
+  <body>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>3번풀이</title>
-</head>
+		<header class="page-header">홈페이지의 헤더</header>
 
-<body>
-    <table class="page-layout">
-        <tbody>
+		<main>
+			<nav>네비게이션</nav>
+			<section>컨텐츠</section>
+		</main>
 
-            <tr>
-                <td class="page-header" colspan="2">홈페이지의 헤더</td>
-            </tr>
+		<footer class="page-footer">홈페이지의 푸터</footer>
 
-            <tr class="page-main">
-                <td class="page-navigator">네비게이션</td>
-                <td class="page-content">컨텐츠</td>
-            </tr>
-
-            <tr>
-                <td class="page-footer" colspan="2">홈페이지의 푸터</td>
-            </tr>
-
-        </tbody>
-    </table>
-</body>
-
-<style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-    body {
-        width: 1280px;
-        margin: 0 auto;
-        overflow-y: auto;
-    }
-    table.page-layout {
-        width:100%;
-        height:100%;
-    }
-    table.page-layout td{
-        vertical-align : top;
-    }
-    .page-main{
-        height: 720px;
-    }
-    .page-navigator {
-        width: 220px;
-        border-right: 1px solid lightgray;
-    }
-    .page-header{
-        height:120px;
-        border-bottom: 1px solid lightgrey;
-    }
-    .page-footer{
-        height:120px;
-        border-top: 1px solid lightgrey;
-    }
-</style>
-
+	</body>
+	<style>
+		html,body{
+            margin:0;
+            padding:0;
+            height:100%
+        }
+        body{
+            display:flex;
+            flex-direction:column;
+            width:1280px;
+            margin:0 auto;
+            overflow-y: auto;
+        }
+        main{
+            display:flex;
+            flex-grow:1;
+            flex-shrink: 0;
+            flex-basis: 720px;
+        }
+        main > nav{
+            border-right:1px solid lightgrey;
+            flex-shrink:0;
+            width:220px;
+        }
+        main > section{
+            flex-grow:1;
+            overflow-x:auto;
+        }
+        header.page-header{
+            flex-shrink: 0;
+            flex-basis:120px;
+            border-bottom: 1px solid lightgrey;
+        }
+        footer.page-footer{
+            flex-shrink:0;
+            flex-basis: 120px;
+            border-top:1px solid lightgrey;
+        }
+	</style>
 </html>

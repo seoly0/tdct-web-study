@@ -1,59 +1,139 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)https://seoly0.netlify.app/practice/process-4.html -->
+<!-- saved from url=(0050)https://seoly0.netlify.app/practice/process-5.html -->
 <html>
-  <head>
+  
+	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  	<title>4풀이</title>
-  </head>
-  <body>
+    <title>5풀이</title>
 
-		<header class="page-header">홈페이지의 헤더</header>
+	</head>
+  
+	<body>
 
-		<main>
-			<nav>네비게이션</nav>
-			<section>컨텐츠</section>
-		</main>
+		<h1>가장 많이 사용되는 CSS 속성들</h1>
+	
+			<div class="description">
+				이번 시간에는 조금 쉬어가는 느낌으로 CSS에서 가장 많이 사용되는 스타일 속성들을 알아봅시다.<br>
+				아마 이전 예제들에서 최소 한번 씩은 등장했을 텐데요.<br>
+				그동안은 무작정 따라하시느라, 어렴풋이 어떤 속성인지 아셨겠지만, 그래도 정확하게는 알기 어려웠을 겁니다.
+			</div>
 
-		<footer class="page-footer">홈페이지의 푸터</footer>
+		<h2>여백(padding)</h2>
+
+			<div class="description">
+				padding은 부모 요소가 자식 요소를 배치하기 전, 먼저 일정 부분 공간을 차지하는 즉, 여백값입니다.
+			</div>
+			
+			<!-- padding 없음 -->
+			<div class="item" style="background-color: yellowgreen;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+			<!-- 모든 방향에 16px만큼의 패딩을 지정 -->
+			<div class="item" style="padding: 16px; background-color: yellowgreen;;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+			<!-- 상단 패딩 16px 지정 -->
+			<div class="item" style="background-color: yellowgreen; padding-top:  16px;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+			<!-- 하단 패딩 16px 지정 -->
+			<div class="item" style="background-color: yellowgreen; padding-bottom: 16px;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+			<!-- 좌측 패딩 16px 지정 -->
+			<div class="item" style="background-color: yellowgreen; padding-left: 16px;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+			<!-- 우측 패딩 16px 지정 -->
+			<div class="item" style="background-color: yellowgreen; padding-right: 16px;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+			<!-- 수직 방향 패딩 16px 지정 -->
+			<div class="item" style="background-color: yellowgreen; padding: 16px 0;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+			<!-- 수평 방향으로 패딩 16px 지정 -->
+			<div class="item" style="background-color: yellowgreen; padding: 0 16px;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+	
+			<!-- 모든 방향에 각각 다른 패딩값 지정 -->
+			<div class="item" style="background-color: yellowgreen; padding: 8px 16px 24px 32px;">
+				<div style="background-color: orange; height: 20px;"></div>
+			</div>
+
+		<h2>간격(margin)</h2>
+
+			<div class="description">
+				margin은 인접한 요소들 간의 간격을 나타냅니다. padding처럼 top, bottom, left, right의 margin을 각각 지정할 수 있으며,<br>
+				수직방향, 수평방향, 모든방향으로 값을 따로 지정할 수 있습니다...만 생략하겠습니다.
+			</div>
+
+			<!-- 각 요소마다 모든 방향으로 16px만큼 간격이 지정되어 있음. -->
+			<div class="item" style="background-color: yellowgreen;">
+				<button style="margin: 16px; background-color: orange;">Text</button>
+				<button style="margin: 16px; background-color: orange;">Text</button>
+				<button style="margin: 16px; background-color: orange;">Text</button>
+				<button style="margin: 16px; background-color: orange;">Text</button> <br>
+				<button style="margin: 16px; background-color: orange;">Text</button>
+				<button style="margin: 16px; background-color: orange;">Text</button>
+				<button style="margin: 16px; background-color: orange;">Text</button>
+			</div>
+
+			<div class="description">
+				CSS를 만든 사람들이 margin을 이런 식으로 사용하라고 만든 것인지는 모르겠지만, margin을 사용해서 수평 가운데 정렬이 가능합니다.<br>
+				일명 마진제로오토! 아마도 가장 단순한 가운데 정렬 방법일 겁니다.
+			</div>
+
+			<div class="item" style="background-color: yellowgreen;">
+				<div style="background-color: orange; height: 100px; width: 100px; margin: 0 auto;"></div>
+			</div>
+
+		<h2>너비와 높이(width and height)</h2>
+
+			<div class="description">
+				너비와 높이 뿐만 아니라, css에서 크기를 지정하는 방법은 크게 두가지입니다.<br>
+				절대적인 크기와 상대적인 크기 입니다.<br>
+				px값을 지정하는 것은 절대적인 크기(= 정적인 크기, 정해진 크기)입니다.
+			</div>
+
+			<div class="item" style="background-color: orange; width: 50px; height: 50px;"></div>
+			<div class="item" style="background-color: orange; width: 100px; height: 100px"></div>
+
+			<div class="description">
+				반면 상대적인 크기를 지정하는 방법도 있습니다. 10%, 50%, 100% 처럼 퍼센트를 지정하는 방식이죠.<br>
+				10%로 크기를 지정하게 되면, 부모 요소의 크기의 10% 만큼의 크기를 갖게 됩니다.
+			</div>
+
+			<div class="item" style="background-color: orange; width: 10%; height: 50px;"></div>
+			<div class="item" style="background-color: orange; width: 50%; height: 50px;"></div>
+			<div class="item" style="background-color:orange; width:100%; height: 50px;"></div>
+
+			<div class="description">
+				최소크기와 최대크기를 지정하는 방법도 있습니다.
+			</div>
+
+			<div class="item" style="background-color: orange; max-width: 100px; max-height: 100px; width: 100%; height: 100%;"></div>
+			<div class="item" style="background-color: orange; min-width: 100px; min-height: 100px;"></div>"
 
 	</body>
+
 	<style>
-		html,body{
-            margin:0;
-            padding:0;
-            height:100%
-        }
-        body{
-            display:flex;
-            flex-direction:column;
-            width:1280px;
-            margin:0 auto;
-            overflow-y: auto;
-        }
-        main{
-            display:flex;
-            flex-grow:1;
-            flex-shrink: 0;
-            flex-basis: 720px;
-        }
-        main > nav{
-            border-right:1px solid lightgrey;
-            flex-shrink:0;
-            width:220px;
-        }
-        main > section{
-            flex-grow:1;
-            overflow-x:auto;
-        }
-        header.page-header{
-            flex-shrink: 0;
-            flex-basis:120px;
-            border-bottom: 1px solid lightgrey;
-        }
-        footer.page-footer{
-            flex-shrink:0;
-            flex-basis: 120px;
-            border-top:1px solid lightgrey;
-        }
+		.description {
+			padding: 16px;
+			margin-top: 16px;
+			margin-bottom: 16px;
+			background-color: #eeeeee;
+			border-radius: 10px;
+		}
+		.item {
+			margin-bottom: 16px;
+		}
 	</style>
-</html>

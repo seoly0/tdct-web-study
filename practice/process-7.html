@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      상호작용
+    </title>
+  </head>
+
+  <body>
+    <!-- 이번에는 실전예제를 시작하기 전, 마지막으로 input에 대해 알아봅시다. -->
+    <!-- 각종 웹사이트 로그인에 필요한 아이디/비밀번호 입력, 검색엔진의 입력창이 아주 대표적인 input입니다. -->
+    <!-- input은 입력을 의미합니다. 웹페이지의 사용자로부터 입력을 받고, 상호작용을 하는 아주 중요한 역할을 합니다. -->
+    <!-- input이 없었다면 웹페이지는 모니터속 광고 전단지에 불과할 겁니다. -->
+    <!-- html에 input이 존재하는 덕분에 웹을 통해 사용자와 상호작용할 수 있는 서비스/애플리케이션을 배포할 수 있습니다. -->
+
+    <div class="row">
+      <span class="label">
+        input[type=text]
+      </span>
+      <div class="input-wrapper">
+        <!-- text는 가장 기초적인 유형의 input입니다. 사용자로부터 string(문자열)을 입력받습니다. -->
+        <!-- process-1에서 살짝 다루었던 이벤트리스너와 이벤트핸들러가 등장했습니다. -->
+        <!-- 간단하게 설명하자면 -->
+        <!-- onclick, oninput 등, onXXXX과 같은 속성이 이벤트리스너입니다. -->
+        <!-- 속성이 지정된 요소(이번 예제에서는 주로 input)에서 발생한 이벤트를 리스닝(감시, 감지)하고 있습니다. -->
+        <!-- 이벤트리스너는 이벤트가 발생하면 이를 감지하고 이벤트핸들러에게 이벤트를 전달합니다. -->
+        <!-- 이벤트핸들러는 javascript의 함수(function)를 지정하며, 지정된 함수는 전달받은 이벤트를 처리합니다. -->
+        <!-- 이번 예제 맨 아래쪽에 작성된 function onTextInput(value) { ... } 과 같은 요상한 것들이 바로 함수입니다. -->
+        <input type="text" oninput="onTextInput(value)">
+      </div>
+      <span id="text"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=email]
+      </span>
+      <!-- 인터넷을 많이 이용해보셨으면 잘 아시겠죠. 이메일을 입력받는 input은 정말정말 많이 쓰입니다. -->
+      <!-- 직접 브라우저에서 값을 입력해봅시다!! ...어째 text랑 큰 차이는 없는 것 같죠..? ...그렇습니다. 이렇게 쓰면 아무 차이가 없습니다. -->
+      <div class="input-wrapper">
+        <input type="email" oninput="onEmailInput(value)">
+      </div>
+      <span id="email"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=password]
+      </span>
+      <!-- password는 아주 독특한 input 유형입니다. 입력한 값이... 제대로 안보이죠. 그 이유야 말하지 않아도 다들 아시겠죠. 보안은 중대사항입니다. -->
+      <div class="input-wrapper">
+        <input type="password" oninput="onPasswordInput(value)">
+      </div>
+      <span id="password"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=number]
+      </span>
+      <!-- number는 오직 숫자만 입력할 수 있게끔 하는 input입니다. 추가적으로 오른쪽에 위아래 화살표모양 버튼을 누르면 숫자가 커졌다 작아졌다 합니다. -->
+      <div class="input-wrapper">
+        <input type="number" oninput="onNumberInput(value)">
+      </div>
+      <span id="number"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=checkbox]
+      </span>
+      <div class="input-wrapper">
+        <!-- checkbox 유형은 value가 아니라 event를 전달하네요. 유의해주세요. -->
+        <input type="checkbox" oninput="onCheckboxInput(event)">
+      </div>
+      <span id="checkbox"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=radio]
+      </span>
+      <div class="input-wrapper">
+        <!-- radio 유형의 input은 단일로 사용하는 것이 큰 의미가 없습니다. 여러 선택지 중 하나를 고르는 것이기 때문이죠. -->
+        <input type="radio" name="favorite" value="chicken" oninput="onRadioInput(value)">
+        <input type="radio" name="favorite" value="pizza" oninput="onRadioInput(value)">
+        <input type="radio" name="favorite" value="pasta" oninput="onRadioInput(value)">
+      </div>
+      <span id="radio"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=range]
+      </span>
+      <div class="input-wrapper">
+        <!-- range 유형의 input은 어쩌면 그다지 흔하게 보이는 input이 아닐지도 모릅니다. 하지만 어디서 주로 쓰이는지는 분명하게 알고 있죠. -->
+        <!-- 네. 유튜브 볼륨 조절입니다. -->
+        <input type="range" oninput="onRangeInput(value)">
+      </div>
+      <span id="range"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=color]
+      </span>
+      <div class="input-wrapper">
+        <!-- color 유형의 input도 자주 사용되지는 않는 것 같습니다. 가장 좋아하는 색을 골라봅시다. 저는 #c572cb -->
+        <input type="color" oninput="onColorInput(value)">
+      </div>
+      <span id="color"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=date]
+      </span>
+      <div class="input-wrapper">
+        <!-- 날짜나 시간을 선택하는 input은 곧잘 사용되는 input입니다. -->
+        <!-- 소프트웨어 개발에서 날짜를 다루는 것은 생각보다 까다롭습니다. 물론 퍼블리싱/마크업에서는 크게 신경쓰실 필요는 없지만요. -->
+        <input type="date" oninput="onDateInput(value)">
+      </div>
+      <span id="date"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=time]
+      </span>
+      <div class="input-wrapper">
+        <input type="time" oninput="onTimeInput(value)">
+      </div>
+      <span id="time"></span>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        input[type=button]
+      </span>
+      <!-- 버튼은 <button> 태그를 이용하여 사용할 수도 있습니다. 버튼은 oninput 이벤트리스너를 사용하지 않습니다. onclick 이벤트 리스너를 사용해주세요. -->
+      <div class="input-wrapper">
+        <input type="button" value="새로고침!" onclick="onButtonInput()">
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="label">
+        select
+      </span>
+      <div class="input-wrapper">
+        <!-- 마지막으로 input 태그는 아니지만... 아주아주 많이 사용되는 select에 대해 알아보겠습니다. -->
+        <select oninput="onSelect(value)">
+          <!-- option 태그를 select 태그 안에 포함시키면 선택가능한 값들이 추가됩니다. -->
+          <option disabled selected> -- select an option -- </option>
+          <option value="i am">나는</option>
+          <option value="romantic">낭만</option>
+          <option value="cat">고양이</option>
+        </select>
+      </div>
+      <span id="select"></span>
+    </div>
+
+  </body>
+  <script lang="javascript">
+    function onTextInput(value) {
+      document.getElementById('text').innerText = value;
+    }
+    function onEmailInput(value) {
+      document.getElementById('email').innerText = value;
+    }
+    function onPasswordInput(value) {
+      document.getElementById('password').innerText = value;
+    }
+    function onNumberInput(value) {
+      document.getElementById('number').innerText = value;
+    }
+    function onCheckboxInput(event) {
+      document.getElementById('checkbox').innerText = event.target.checked;
+    }
+    function onRadioInput(value) {
+      document.getElementById('radio').innerText = value;
+    }
+    function onRangeInput(value) {
+      document.getElementById('range').innerText = value;
+    }
+    function onColorInput(value) {
+      document.getElementById('color').innerText = value;
+    }
+    function onDateInput(value) {
+      document.getElementById('date').innerText = value;
+    }
+    function onTimeInput(value) {
+      document.getElementById('time').innerText = value;
+    }
+    function onButtonInput() {
+      window.location.reload(); // 새로고침입니다. 버튼을 누르면 웹페이지가 새로고침됩니다.
+    }
+    function onSelect(value) {
+      document.getElementById('select').innerText = value;
+    }
+  </script>
+</html>
+
+<style>
+.row {
+  margin-bottom: 8px;
+}
+.label {
+  display: inline-block;
+  width: 180px;
+}
+.input-wrapper {
+  display: inline-block;
+  width: 200px;
+  margin-right: 16px;
+}
+</style>

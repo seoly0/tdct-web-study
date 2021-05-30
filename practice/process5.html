@@ -42,9 +42,7 @@
             수직방향, 수평방향, 모든 방향으로 값을 따로 지정할 수 있습니다..만 생략하겠습니다.
         </div>
 
-        <div class="item" style="background-color:yellowgreen;">
-        </div>
-    
+        <div class="item" style="background-color: lavender;">
 <button style="margin: 30px; background-color: rgb(255, 0, 119);">안녕</button><br>
 <button style="margin: 30px; background-color: orangered;">딴</button>
 <button style="margin: 30px; background-color: orangered;">생각은</button>
@@ -80,16 +78,180 @@
 
 레이아웃의 너비가 1280px이기 때문에 10%는 128px, 50%는 640px, 100%는 1280px가 됩니다.
 <div class="item" style="width: 10%; height: 50px; background-color:sandybrown"></div>
-<div class="item" style="width: 50%; height: auto; background-color:slategray"></div>
-<div class="item" style="width:100%; height: 50px; background-color:snow"></div>
+<div class="item" style="width: 50%; height: 50px; background-color:slategray"></div>
+<div class="item" style="width:100%; height: 50px; background-color:rgb(161, 207, 88)"></div>
 
 <div class="description">
     최소크기와 최대 크기를 지정하는 방법도 있습니다.
 </div>
-<div class="item" style="max-width:100px; max-height:100px; width:100%; height:100%; background-color: tomato ;"></div>
-<div class="item" stlye="min-width:100px; min-height:100px; background-color: darkcyan;"></div>"
+<div class="item" style="max-width: 100px; max-height:100px; width:100%; height:100%; background-color: tomato ;"></div>
+<div class="item" style="min-width: 100px; min-height:100px; background-color: teal;"></div>
 
+<h2>
+    색상(color)
+</h2>
 
+<div class="description">
+    색상을 지정하는 가장 쉬운 방법은 이미 이름을 가진 색상을 이용하는 것입니다.
+    lovely names
+</div>
+
+<div class="item" style="color:rgb(255, 0, 119)">
+    <div style="background-color: sienna;"> 시에나 </div>
+    <div style="background-color: oldlace;">올드레이스</div>
+    <div style="background-color: white;">화이트</div>
+    <div style="background-color: antiquewhite;">앤틱화이트</div>
+    <div style="background-color: seagreen;">초록바다</div>
+
+</div>
+<div class="decription">
+    색상을 지정하는 가장 보편적인 방법 중 하나는 HEX코드를 사용하는 것입니다. 한번쯤 보셨을 법한 해시태그(#)와 0~9, A~F로 이루어진 코드입니다. <br>
+    해시태그 뒤에 2자리씩 끊어서 각각 red, green, blue...RGB의 밝기를 나타냅니다. 00이 가장 어두우며 FF가 가장 밝습니다. <br>
+</div>
+<div class="item" style="border: 1px solid grey;">
+<div style="background-color: #000000; color:  #FFFFFF;">검정</div>
+<div style="background-color: #FFFFFF; color: #000000;">하양</div>
+</div>
+
+<div class="description">
+    hex코드와 함께 보편적으로 사용되는 rgb함수가 있습니다.  <br>
+    red green blue (0~255, 0~255, 0~255)와 같은 형태로 사용하며 쉽게 말하면 0이 가장 어두운 밝기, 255가 가장 밝은 밝기 입니다<br>
+    염색앱 아이디어가 있었는데 갑자기 힌트를 얻은 듯
+</div>
+<div class="item" style="border: 1px solid grey;">
+<div style="background-color: rgb(255,255,255); color:rgb(0,0,0)">하양</div>
+<div style="background-color: rgb(0,0,0); color: rgb(255,255,255);">검정</div>
+</div>
+
+<div class="description">
+    그라이던트에도 여러가지 종류가 있습니다만, 여기서는 선형 그라디언트만 알아보도록 합시다. 넵.
+</div>
+<div class="item" style="background: linear-gradient(to right, rgb(121, 150, 121), rgb(121, 160, 121 ), rgb(121, 170, 121), rgb(121, 180, 121), rgb(121, 190, 121), rgb(121, 200, 121), rgb(121, 210, 121), rgb(121, 220, 121), rgb(121, 230, 121),rgb(121, 240, 121), rgb(121, 255, 121));">Green Gradinet</div>
+
+<h2>
+    경계선(border)
+</h2>
+
+<div class="description">
+    그냥 따라해보기
+</div>
+
+<div class="item" style="padding:16px; border: 1px solid grey;">
+1px 솔리드 회색
+</div>
+<div class="item" style="padding: 16px; border: 1px dashed grey;">
+대시 회색
+</div>
+<div class="item" style="padding:16px; border: 1px dotted gray;">
+도트 회색
+</div>
+<div class="item" style="padding:16px; border: 1px solid grey;">
+1px 솔리드 회색
+</div>
+<div class="item" style="padding: 16px; border: 2px solid grey;">
+2px 솔리드 회색
+</div>
+<div class="item" style="padding: 16px; border: 3px solid grey;">
+3px 솔리드 회색
+</div>
+<div class="item" style="padding: 16px; border: 4px solid grey;">
+4px 솔리드 회색
+</div>
+<div class="item" style="padding:16px; border: 4px solid grey; border-radius: 10px">
+radius 10px</div>
+<div class="item" style="padding:16px; border: 4px solid grey; border-radius: 30px">
+radius 30px</div>
+<div class="item" style="padding: 16px; border: 4px solid red; border-radius: 10px 0 10px 0">
+시계방향</div>
+<div class="item" style="padding: 16px; border-top: 4px solid grey;">
+top 
+</div>
+<div class="item" style="padding: 16px; border-bottom: 4px solid grey;">
+bottom 
+</div>
+<div class="item" style="padding: 16px; border-left: 4px solid grey;">
+left
+</div>
+<div class="item" style="padding: 16px; border-right: 4px solid grey;">
+right 
+</div>
+
+<h2>
+    폰트(font)
+</h2>
+<div class="desctiption">
+    폰트의 사이즈를 지정합니다. px로 지정하는 것뿐만 아니라, em, rem이라는 단위도 많이 사용합니다. <br>
+    지금은 em, rem 있구나 하는 정도로만 알아둡시다.
+</div>
+
+<div class="item">
+    <span style="font-size: 8px;">가</span>
+    <span style="font-size: 12px;">나</span>
+    <span style="font-size: 16px;">다</span>
+    <span style="font-size: 20px;">라</span>
+    <span style="font-size: 24px;">마</span>
+    <span style="font-size: 28px;">바</span>
+    <span style="font-size: 32px;">사</span>
+ </div>
+
+ <div class="desctiption">
+     폰트의 weight 는 쉽게 말하면 글자의 굵기 정도로 생각하면 됩니다. 암요<br>
+     예제에서는 100~700 사이의 값을 100단위로 끊어서 지정했는데요. 사실 이는 폰트마다 다를 수 있습니다. <br>
+     실제로 화면에서 보면 글자가 점점 굵어진다기 보다는, 어느 순간 갑자기 굵어 지는 것을 보이죠? 헐. 그러네요? 
+
+ </div>
+ <div class="item">
+    <span style="font-weight: 100;">가</span>
+    <span style="font-weight: 200;">나</span>
+    <span style="font-weight: 300;">다</span>
+    <span style="font-weight: 400;">라</span>
+    <span style="font-weight: 500;">마</span>
+    <span style="font-weight: 600;">바</span>
+    <span style="font-weight: 700;">사</span>
+ </div>
+
+<div class="description">
+    font-family는 폰트를 지정하는  방법입니다.<br>
+    아래 사용한 폰트들은 서로 크게 차이가 나지 않는 것 같네요<br>
+    4번째에는 여러 폰트를 아열했는데요, 사용자의 컴퓨터에 Arial 폰트가 없으면 helvetica를, helvetica가 없으면 sans-serif를 사용하라는 뜻입니다.
+</div>
+<div class="item">
+    <span style="font-family: Arial">ABCDEFG</span>
+    <span style="font-family: Helvetica">ABCDEFG</span>
+    <span style="font-family: sans-serif;">ABCDEFG</span>
+    <span style="font-family: Arial, Helvetica, sans-serif;">ABCDEFG</span>
+질문- ;의 뜻은 무엇인가요? 위에 두줄에는 없고, 아래 두줄에만 있어요</div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="description">
+    헐 이걸 다 외워야 하나요? ㅠㅠ 이정도는요?? ㅠㅠ
+</div>
 
 </body>
 </html>
+
+<style>
+    html, body {
+        margin:0;
+        padding: 0;
+        height: 100%;
+    }
+    body {
+        margin: 0 auto;
+        width: 1280px;
+    }
+    .description {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        background-color: rgb(170, 173, 162);
+        font:rgb(12, 12, 36);
+        border-radius: 10px 0 10px 0;
+    }
+    .item {
+        margin-bottom: 20px;
+    }
+</style>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://seoly0.netlify.app/practice/process-7.html -->
+<html>
+	
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>7풀이</title>
+</head>
+
+<body>
+
+	<div class="row">
+		<span class="label">input[type=text]</span>
+		<div class="input-wrapper">
+			<input type="text" oninput="onTextInput(value)">
+		</div>
+		<span id="text"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=email]</span>
+		<div class="input-wrapper">
+			<input type="email" oninput="onEmailInput(value)">
+		</div>
+		<span id="email"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=password]</span>
+		<div class="input-wrapper">
+			<input type="password" oninput="onPasswordInput(value)">
+		</div>
+		<span id="password"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[number]</span>
+		<div class="input-wrapper">
+			<input type="number" oninput="onNumberInput(value)">
+		</div>
+		<span id="number"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=checkbox]</span>
+		<div class="input-wrapper">
+			<input type="checkbox" oninput="onCheckboxInput(event)">
+		</div>
+		<span id="checkbox"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=radio]</span>
+		<div class="input-wrapper">
+			<input type="radio" name="favorite" value="chicken" oninput="onRadioInput(value)">
+			<input type="radio" name="favorite" value="pizza" oninput="onRadioInput(value)">
+			<input type="radio" name="favorite" value="pasta" oninput="onRadioInput(value)">
+		</div>
+		<span id="radio"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=range]</span>
+		<div class="input-wrapper">
+			<input type="range" oninput="onRangeInput(value)">
+		</div>
+		<span id="range"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=color]</span>
+		<div class="input-wrapper">
+			<input type="color" oninput="onColorInput(value)">
+		</div>
+		<span id="color"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=date]</span>
+		<div class="input-wrapper">
+			<input type="date" oninput="onDateInput(vaule)">
+		</div>
+		<span id="date"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[type=time]</span>
+		<div class="input-wrapper">
+			<input type="time" oninput="onTimeInput(value)">
+		</div>
+		<span id="tiem"></span>
+	</div>
+
+	<div class="row">
+		<span class="label">input[button]</span>
+		<div class="input-wrapper">
+			<input type="button" value="새로고침!" onclick="onButtonInput()">
+		</div>
+	</div>
+
+	<div class="row">
+		<span class="label">select</span>
+		<div class="input-wrapper">
+			<select oninput="onSelect(value)">
+				<option disabled="" selected=""> -- select an option -- </option>
+				<option value="i am">나는</option>
+				<option value="romantic">낭만</option>
+				<option value="cat">고양이</option>
+			</select>
+		</div>
+		<span id="select"></span>
+	</div>
+
+	<script lang="javascript">
+		function onTextInput(value) {
+			document.getElementById('text').innerText = value;
+		}
+		function onEmailInput(value) {
+			document.getElementById('email').innerText = value;
+		}
+		function onPasswordInput(value) {
+			document.getElementById('password').innerText = value;
+		}
+		function onNumberInput(value) {
+			document.getElementById('number').innerText = value;
+		}
+		function onCheckboxInput(value) {
+			document.getElementById('checkbox').innerText = event.target.checked;
+		}
+		function onRadioInput(value) {
+			document.getElementById('radio').innerText = value
+		}
+		function onRangeInput(value) {
+			document.getElementById('range').innerText = value;
+		}
+		function onColorInput(value) {
+			document.getElementById('color').innerText = value;
+		}
+		function onDateInput(value) {
+			document.getElementById('date').innerText = value;
+		}
+		function onTimeInput(value) {
+			document.getElementById('time').innerText = value;
+		}
+		function onButtonInput() {
+			window.location.reload();
+		}
+		function onSelect(value) {
+			document.getElementById('select').innerText = value;
+		}
+	</script>
+
+	<style>
+		.row {
+			margin-bottom: 8px;
+		}
+		.label {
+			display: inline-block;
+			width: 180px;
+		}
+		.input-wrapper {
+			display: inline-block;
+			width: 200px;
+			margin-right: 16px;
+		}
+	</style>
+
+</body>
+
+</html>

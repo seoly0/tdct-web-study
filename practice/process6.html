@@ -110,6 +110,65 @@
 				물론 자체적인 너비를 지정한다고 해도 <a href="">위에서</a> 보았듯이 자기 혼자 line을 점유하는 것은 마찬가지입니다.
 			</div>
 
+			<div class="flex">
+				<div class="item">Item-1</div>
+				<div class="item">Item-2</div>
+				<div class="item">Item-3</div>
+			</div>
+
+			<div class="description">
+				반면 flex는 inline 혹은 inline-block처럼 여러 요소가 같은 line에 위치하게 됩니다.<br>
+				기본적으로 너비, 높이가 지정되어있지 않으면 자식 요소의 너비와 높이에 맞추려고 하죠.
+			</div>
+			
+			<h2>FLEX의 방향</h2>
+
+			<div class="description">
+				flex에는 방향이 있습니다. 가로로 flex하느냐(row), 세로로 flex하느냐(column) 인데요. flex의 기본 방향은 row입니다.
+			</div>
+
+			<div class="flex row">
+				<div class="item">Item-1</div>
+				<div class="item">Item-2</div>
+				<div class="item">Item-3</div>
+			</div>
+
+			<div class="description">
+				역방향도 존재합니다. 이게 무슨 쓸모인가 싶을 수 있지만 의외로! 쓸모가 있답니다.
+			</div>
+
+			<div class="flex row-reverse">
+				<div class="item">Item-1</div>
+				<div class="item">Item-2</div>
+				<div class="item">Item-3</div>
+			</div>
+
+			<div class="description">
+				column은 어떨까요?
+			</div>
+
+			<div class="flex column">
+				<div class="item">Item-1</div>
+				<div class="item">Item-2</div>
+				<div class="item">Item-3</div>
+			</div>
+
+			<br>
+
+			<div class="flex column-reverse">
+				<div class="item">Item-1</div>
+				<div class="item">Item-2</div>
+				<div class="item">Item-3</div>
+			</div>
+
+			<div class="description">
+				.... 이러면 block과 다른게 뭐죠???<br>
+				네 맞습니다. flex를 고작 이렇게 사용하려고 한다면 block과 다를게 딱히 없죠.<br>
+				앞서, flex는 layout 작성에 많이 사용된다고 말씀드렸었죠?
+			</div>
+
+			<h2>FLEX GROW, FLEX SHRINK, FLEX BASIS</h2>
+
 		</div>
 
   <style>
@@ -133,6 +192,22 @@
 			background-color: greenyellow;
 			border: 1px solid orange;
 		}
+		.flex {
+			display: flex;
+		}
+		.row{
+			flex-direction: row;
+		}
+		.row-reverse{
+			flex-direction: row-reverse;
+		}
+		.column{
+			flex-direction: column;
+		}
+		.column-reverse{
+			flex-direction: column-reverse;
+		}
 	</style>
 
 	</body>
+	</html>

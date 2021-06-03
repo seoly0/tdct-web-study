@@ -77,11 +77,47 @@ event handler는 자바스크립트의 함수 onXXXXXX() 를 지정
     </div>
     <span id="color"></span>
 </div>
-띄어쓰기가 중요하군요. ㅠ 
-<br> 천제라니 졸린가보군요. 오늘은 여기까지. 
-<br> 근데 보라색 테두리가 어지러워요. 진짜 자야겠다 ㅋㅋ
+
+<div class="row">
+    <span class="label"> input [type=date]</span>
+    <div class="input-wrapper">
+        <input type="date" oninput="inDateInput(value)">
+    </div>
+    <span id="date"></span>
+</div>
+잠시만요? indateinput()함수를 또 누군가가 만들어야 하는 거였나요? 년월일이 나오게 하는 거 보면 형식이 있을텐데 ㅠ 지금까지 자동인줄 ㅋㅋㅋ
+<br>숫자때부터 좀 이상했어요. 정수로 표기되는 것과 화살표로 움직이는 거. 비번에 눈 보이는 것도. 
+<br>그리고 range서부터 보면 나머지 디자인도 다 함수로 지정하는거였나요? ㅠ 
+<br>그 함수는 어디에 있는거예요? 아래 function onDateInput 이거 작동하게 하는 그 무엇이요. 
+
+<div class="row">
+    <span class="label"> input [tyle=time]</span>
+    <div class="input-wrapper">
+        <input type="time" oninput="onTimeInput(value)">
+    </div>
+    <span id="ime"></span>
+</div>
+
+<div class="row">
+    <span class="label">input [type=button]</span>
+    <div class="input-wrapper">
+        <input type="button" value="refresh" onclick="onButtonInput()">
+    </div>
+</div>
 
 
+<div class="row">
+    <span class="label"> select </span>
+    <div class="input-wrapper">
+        <select oninput="onSelect(value)">
+        <option disabled selected> ---select an option---</option>
+        <option value="곱창">때론</option>
+        <option value="양꼬치">선택권이</option>
+        <option value="선짓국">없다</option>
+    </select>
+    </div>
+    <span id="select"></span>
+</div>
 <script lang="javascript">
     function onTextInput(value) {
       document.getElementById('text').innerText = value;
@@ -106,6 +142,18 @@ event handler는 자바스크립트의 함수 onXXXXXX() 를 지정
     }
     function onColorInput(value) {
       document.getElementById('color').innerText = value;
+    }
+    function onDateInput(value)  {
+        document.getElementById('time').innerText = value;
+    }
+    function onTimeInput(value) {
+        document.getElementById('date').innerText = value;
+    }
+    function onButtonInput() {
+        window.location.reload();
+    }
+    function onSelect(value) {
+        document.getElementById('select').innerText = value;
     }
 </script>
 <style>

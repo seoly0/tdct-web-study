@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>
+            상호작용
+        </title>
+    </head>
+
+<body>
+    <div class="row">
+        <span class="label"> input[type=text]</span>
+        <div class="input-wrapper">
+            <input type="text " oninput="onTextInput(value)">
+        </div>
+        <span id="text"></span>
+    </div>
+event listener 는 이벤트를 감지하고 event handler에게 이벤트를 전달<br>
+event handler는 자바스크립트의 함수 onXXXXXX() 를 지정
+
+    <div class="row">
+        <span class="label"> input[type=email]</span>
+        <div class="input-wrapper">
+            <input type="email" oninput="onEmailInput(value)">
+        </div>
+        <span id="email"></span>
+    </div>
+
+    <div class="row">
+        <span class="label">input[type=password]</span>
+        <div class="input-wrapper">
+            <input type="password" oninput="onPasswordInput(value)">
+        </div>
+        <span id="password"></span>
+    </div>
+    ㅋㅋㅋ 보안은 중대사항인가요, 정보보안기사님? 맞죠?!
+
+    <div class="row">
+        <span class="label"> input [type=number]</span>
+        <div class="input-wrapper">
+            <input type="number" oninput="onNumberInput(value)">
+        </div>
+        <span id="number"></span>
+    </div>
+    근데 HTML은 누가 만든거예요? 완전 천잰대?!!!!! 어떻게 이렇게 만들었지? 세종대왕 못지 않은데요?!! 
+    <br>다음엔 이렇게 언어를 입력하면 어떤 알고리즘으로 작동하게 만드는 건지를 꼭 배우고 싶어요. 
+    
+    <div>
+        <span class="label"> input[type=checkbox]</span>
+        <div class="input-wrapper">
+            <input type="checkbox" oninput="inCheckboxInput(event)">
+        </div>
+        <span id="checkbox"></span>
+    </div>
+    근데 span id는 왜 적는 걸까 
+    <div class="row">
+        <span class="label">input[type=radio]</span>
+        <div class="input-wrapper"> 최애메뉴
+            <input type="radio" name="favorite" value="chichen" oninput="onRadioInput(value)">
+            <input type="radio" name="favorite" vlaue="pizza" oninput="onRadioInput(value)">
+            <input type="radio" name="favorite" value="pasta" oninput="onRadioInput(value)">
+        </div>
+        <span id="radio"></span>
+    </div>
+    천재들이 보는 세상은 어떤가요? 천제의 눈으로 세상을 보고싶군요. 대리님 천재같아요. 유머코드 보면 알수 있어요 ㅋㅋㅋ
+    
+    <div class="row">
+        <span class="label">input[type=range]</span>
+    <div class="input-wrapper">
+        <input type="range" oninput="onRangeInput(value)">
+    </div>
+    <span id="range"></span>
+    </div>
+
+    <div class="row">
+        <span class="label"> <input [type=color]></span>
+        <div class="input-wrapper"></div>
+        <input type="color" oninput="onColorInput(value)">
+    </div>
+    <span id="color"></span>
+</div>
+
+
+
+
+<script lang="javascript">
+    function onTextInput(value) {
+      document.getElementById('text').innerText = value;
+    }
+    function onEmailInput(value) {
+      document.getElementById('email').innerText = value;
+    }
+    function onPasswordInput(value) {
+      document.getElementById('password').innerText = value;
+    }
+    function onNumberInput(value) {
+      document.getElementById('number').innerText = value;
+    }
+    function onCheckboxInput(event) {
+      document.getElementById('checkbox').innerText = event.target.checked;
+    }
+    function onRadioInput(value) {
+      document.getElementById('radio').innerText = value;
+    }
+    function onRangeInput(value) {
+      document.getElementById('range').innerText = value;
+    }
+    function onColorInput(value) {
+      document.getElementById('color').innerText = value;
+    }
+</script>
+<style>
+    .row {
+        margin-bottom: 10px;
+    }
+    .label {
+        display: inline-block;
+        width: 180px;
+    }
+    .input-wrapper {
+        display: inline;
+        width: 200px;
+        margin-right: 16px;
+    }
+</style>
+</body>
+</html>

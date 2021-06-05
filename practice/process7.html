@@ -95,7 +95,7 @@ event handler는 자바스크립트의 함수 onXXXXXX() 를 지정
     <div class="input-wrapper">
         <input type="time" oninput="onTimeInput(value)">
     </div>
-    <span id="ime"></span>
+    <span id="time"></span>
 </div>
 
 <div class="row">
@@ -144,10 +144,10 @@ event handler는 자바스크립트의 함수 onXXXXXX() 를 지정
       document.getElementById('color').innerText = value;
     }
     function onDateInput(value)  {
-        document.getElementById('time').innerText = value;
+        document.getElementById('date').innerText = value;
     }
     function onTimeInput(value) {
-        document.getElementById('date').innerText = value;
+        document.getElementById('time').innerText = value;
     }
     function onButtonInput() {
         window.location.reload();

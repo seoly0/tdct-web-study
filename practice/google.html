@@ -51,6 +51,7 @@
                 <div class="footer-block-item">Google정보</div>
                 <div class="footer-block-item">광고</div>
                 <div class="footer-block-item">비즈니스</div>
+                <div class="footer-block-item">검색의 원리</div>
             </div>
         </div>
         <div class="footer-block-item-container">
@@ -58,135 +59,141 @@
             <div class="footer-block-item">약관</div>
             <div class="footer-block-item">설정</div>
         </div>
+    </div>
     </footer>
 
-<style>
-    html, body {
-        margin: 0;
-        padding: 0;
-        height:100% ;
-        min-width: 720px
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        overflow-y: auto
-    }
-    header.page-header {
-        font-size: 13px;
-        flex-shrink: 0;
-        padding:6px;
-    }
-    .header-block {
-        padding: 0 4px;
-        display: flex;
-        justify-content: flex-end
-    }
-    .header-block-item {
-        display: flex;
-        align-items: center;
-        margin-left: 15px;
-    }
-    .my-google-account {
-        padding: 4px;
-    }
-    .my-google-account > div {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background-color: aquamarine;
-        color: rgb(252, 8, 179);
-        font-size: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-    main {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 680px;
-        display: flex;
-        flex-direction: column;
-    }
-    .main-content {
-        display:flex;
-        justify-content: center;
-        margin-bottom: 18px;
-    }
-    .search-input-wrapper {
-        padding: 12px;
-        background: #fff;
-        display: flex;
-        border: 1px solid #dfe1e5;
-        box-shadow:none;
-        border-radius:24px;
-        width: 558px
-    }
-    .search-input {
-        border: none;
-        flex-flow: 1;
-        margin: 0 10px;
-    }
-    .search-input:focus {
-        outline: none;
-    }
-    .search-input-wrapper:hover {
-        background-color: #fff;
-        box-shadow: 0 1px 6px rgba(32,33,36,.28);
-        border-color: rgba(223,255,229,0)
-    }
-    .my-google-btn{
-        background-color: #f8f9fa;
-        border: 1px solid#f8f9fa;
-        border-radius: 4px;
-        color: #3c4043;
-        font-family: 'Apple SD Gothic Neo',arial, sans-serif;
-        font-size: 14px;
-        margin: 11px 4px;
-        padding: 0 16px;
-        line-height: 27px;
-        height: 36px;
-        min-width: 54px;
-        text-align: center;
-        cursor: pointer;
-        user-select: none;
-    }
-    .my-google-btn:hover {
-        box-shadow: 0 1px 1px rgba(0,0,0,.1);
-        background-color: #f8f9fa;
-        border: 1px solid #dadce0;
-        color: #202124;
-    }
-    .my-google-btn:focus {
-        border:1px solid #4385f4;
-        outline:none;
-    }
-    .google-service-text {
-        font-size: 13px
-    }
-    footer.page-footer {
-        font-size: 15px;
-        background: #f2f2f2;
-        flex-shrink: 0;
-    }
-    .footer-block {
-        color: rgba(0,0,0,.54);
-        padding: 0 15px;
-        border-bottom: 1px solid #dadce0;
-        display: flex;
-        justify-content: space-between;
-    }
-    .footer-block-item-container {
-        display: flex;
-    }
-    .footer-block-item {
-        padding:15px;
-    }
-    img.icon {
-        width:20px;
-        height: 20px
-    }
-</style>
+    <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+          height:100%;
+          min-width: 720px;
+        }
+        body {
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+          overflow-y: auto;
+        }
+        header.page-header {
+          font-size: 13px;
+          flex-shrink: 0;
+          padding: 6px;
+        }
+        .header-block {
+          padding: 0 4px;
+          display: flex;
+          justify-content: flex-end;
+        }
+        .header-block-item {
+          display: flex;
+          align-items: center;
+          margin-left: 15px;
+        }
+        .my-google-account {
+          padding: 4px;
+        }
+        .my-google-account > div {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background-color: violet;
+          color: white;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        main {
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: 680px;
+          display: flex;
+          flex-direction: column;
+        }
+      
+        .main-content {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 18px;
+        }
+      
+        .search-input-wrapper {
+          padding: 12px;
+          background: #fff;
+          display: flex;
+          border: 1px solid #dfe1e5;
+          box-shadow: none;
+          border-radius: 24px;
+          width: 558px;
+        }
+      
+        .search-input {
+          border: none;
+          flex-grow: 1;
+          margin: 0 10px;
+        }
+        .search-input:focus {
+          outline: none;
+        }
+        .search-input-wrapper:hover {
+          background-color: #fff;
+          box-shadow: 0 1px 6px rgba(32,33,36,.28);
+          border-color: rgba(223,225,229,0);
+        }
+        .my-google-btn {
+          background-color: #f8f9fa;
+          border: 1px solid #f8f9fa;
+          border-radius: 4px;
+          color: #3c4043;
+          font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+          font-size: 14px;
+          margin: 11px 4px;
+          padding: 0 16px;
+          line-height: 27px;
+          height: 36px;
+          min-width: 54px;
+          text-align: center;
+          cursor: pointer;
+          user-select: none;
+        }
+        .my-google-btn:hover {
+          box-shadow: 0 1px 1px rgba(0,0,0,.1);
+          background-color: #f8f9fa;
+          border: 1px solid #dadce0;
+          color: #202124;
+      
+        }
+        .my-google-btn:focus {
+          border: 1px solid #4285f4;
+          outline: none;
+        }
+        .google-service-text {
+          font-size: 13px;
+        }
+        footer.page-footer {
+          font-size: 15px;
+          background: #f2f2f2;
+          flex-shrink: 0;
+        }
+        .footer-block {
+          color: rgba(0,0,0,.54);
+          padding: 0 15px;
+          border-bottom: 1px solid #dadce0;
+          display: flex;
+          justify-content: space-between;
+        }
+        .footer-block-item-container {
+          display: flex;
+        }
+        .footer-block-item {
+          padding: 15px;
+        }
+        img.icon {
+          width: 20px;
+          height: 20px;
+        }
+      </style>
 </body>
 </html>

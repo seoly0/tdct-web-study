@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>CSS 속성</title>
+    </head>
+<body>
+    <h2>여백padding</h2>
+    <div class="item" style="background-color: lightblue;">
+    <div style="background-color: lightcoral; height: 20px"></div>
+    </div>
+    <div class="item" style="padding: 16px; background-color:lightblue">
+    <div style="background-color: lightcoral; height: 20px"></div>
+    </div>
+    
+    <div class="item" style="padding: 20px 0 0 0; background-color: lightblue;">
+    <div style="background-color: lightcoral; height: 20px"></div></div>
+    <div class="item" style="padding: 0 0 20px 0; background-color: lightblue;">
+    <div style="background-color: lightcoral; height: 20px"></div></div>
+    <div class="item" style="padding: 0 0 0 20px; background-color: lightblue;">
+    <div style="background-color: lightcoral; height: 20px"></div></div>
+    <div class="item" style="padding: 0 20px 0 0; background-color: lightblue;">
+    <div style="background-color: lightcoral; height: 20px"></div></div>
+
+    <div class="item" style="padding: 10px 20px 30px 40px; background-color: lightblue;">
+    <div style="background-color: lightcoral; height: 20px"></div>
+    </div>
+
+    <h2>간격margin</h2>
+    <div class="item" style="background-color: lightcoral;">
+        <button style="margin: 30px; background-color: lightgreen">text</button>
+        <button style="margin: 30px; background-color: lightgreen">text</button>
+        <button style="margin: 30px; background-color: lightgreen">text</button>
+    </div>
+    <br>
+    <div class="item" style="background-color: lightcoral;">
+        <button style="margin: 30px; background-color: lightgreen">text</button>
+        <button style="margin: 30px; background-color: lightgreen">text</button>
+        <button style="margin: 30px; background-color: lightgreen">text</button>
+    </div>
+
+    <br>
+    <div class="item" style="background-color: lightgreen;">
+    <div style="background-color: lightpink; height: 100px; width: 100px;
+    margin: 0 auto"></div>
+    </div>
+    <br>
+    <h2>너비와 높이</h2>
+    <div class="description">
+        <ul>
+            <il>절대적인 값 px</il> <il>상대적인 값 %</il>
+        </ul>
+    </div>
+    <br>
+    <h2>색상</h2>
+    <div class="description">
+        <ul>
+            <li>이름</li> <li>HEX코드</li> <li>RGB</li>
+        </ul>
+    </div>
+    <br>
+    <h2>경계선 border</h2>
+    <div class="description">border: 1px solid/dashed/dotted grey</div>
+
+    <h2>폰트</h2>
+    <div class="description">
+        <ul>
+            <li>size: px, em, rem</li>
+            <li>weight: 100</li>
+            <li>family: Arial</li>
+        </ul>
+    </div>
+</body>
+</html>
+<style>
+    html, body {
+        margin:0; padding: 0; height: 100%
+    }
+    body {
+        margin: 0 auto; width: 1280;
+    }
+    .description {
+        padding: 16px; margin: 16px 0 16px 0; background-color: linen; border-radius: 10px;
+    }
+    .item {
+        margin-bottom: 20px
+    }
+</style>

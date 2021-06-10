@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>input</title>
+    </head>
+    <body>
+        <br>
+            <span class="label">input[type=text]</span>
+            <div class="input-wrapper"> <input type="text" oninput="onTextInput(value)"></div>
+        <br>
+            <span class="label">input[type=email]</span>
+            <div class="input-wrapper"> <input type="email" oninput="onEmailInput(value)"></div>
+            <span id="email"></span>
+        <br>
+            <span class="label">input[type=password]</span>
+            <div class="input-wrapper"><input type="password" oninput="onPasswordInput(value)"></div>
+            <span id="password"></span>
+        <br>
+            <span class="label">input[type=number]</span>
+            <div class="input-wrapper"><input type="number" oninput="onNumberInput(value)"></div>
+            <span id="number"></span>
+        <br>
+            <span class="label">input[type=radio]</span>
+            <div class="input-wrapper">
+                <input type="radio" name="favorite" value="chichen" oninput="onRadioInput(value)">
+                <input type="radio" name="favorite" value="pizza" oninput="onRadioInput(value)">
+                <input type="radio" name="favorite" value="pasta" oninput="onRadioInput(value)">
+            </div>
+        <br>
+            <span class="label">input[type=refresh]</span>
+            <div class="input-wrapper"><input type="button" value="refresh" onclick="onButonInput()"></div>
+        <br>
+            <span class="label">select</span>
+            <div class="input-wrapper"><select oninput="onSelect(value)">
+            <option disabled ="" select="">선택하세요</option>
+                <option value="I am">나는</option>
+                <option value="romantic">낭만</option>
+                <option value="cat">고양이</option>
+                <option value=":)">ㅋㅋ</option>
+        </select></div>
+            <span id="selecct"></span>
+
+<script lang="javascript">
+    function onTextInput(value) {document.getElementById('text').innerText = value;}
+    function onEmailInput(value) {document.getElementById('email').innerText = value;}
+    function onPasswordInput(value) {document.getElementById('password').innerText = value;}
+    function onNumberInput(value) {document.getElementById('number').innerText = value;}
+    function onRadioInput(value) {document.getElementById('radio').innerText = value;}
+    function onButtonInput() {window.location.reload();}
+    function onSelect(value) {document.getElementById('select').innerText = value;}
+</script>        
+    </body>
+</html>
+<style>
+    .label {display: inline-block; width:180px}
+    .input-wrapper {display: inline-block; width: 200px; margin-right: 20px;}
+</style>

@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>flex 연습</title>
+    </head>
+
+    <body>
+    <div style="width:1280px; margin: 0 auto;">
+        1) 만일 이거 설정 안한다면?
+
+    <figure>
+        <img src="flex.jpg" style="box-shadow: 0 0 4px grey;">
+        <figcaption> 2) 근데 이미지는 다 깨짐 - git hub? 이미지 어디서 불러오는지 확인 </figcaption>
+    </figure>
+    <div id="나야나">
+        <div class="square">block</div>
+        <div class="square">block</div>
+    <div class="description">span Inline 요소 </div>
+        <span class="square">Inline</span>
+        <span class="square">Inline</span>
+
+    <div class="description">display: inline-block</div>
+        <div class="square inline-block">block</div>
+        <div class="square inline-block">block</div>
+
+    <div class="description">flex를 설정</div>
+        <div class="flex">
+            <div class="square">block</div>
+            <div class="square">block</div>
+        </div>
+    <h1>flex parctice</h1>
+    <div class="description">block vs. flex</div>
+    <div>block
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+    </div>
+
+    <div>flex
+        <div class="flex">
+            <div class="item">item-1</div>
+            <div class="item">item-2</div>
+            <div class="item">item-3</div>
+        </div>
+    </div>
+    <div class="description"> 3) 근데 굳이 여기서 클래스를 지정하고 스타일을 또 지정하지 않고. 그냥 바로 지정하는 방법은?
+        <br> 이건 flex-direction: row-reverse 
+        <div class="flex row-reverse"> 
+            <div class="item">item-1</div>
+            <div class="item">item-2</div>
+            <div class="item">item-3</div>
+        </div>
+    </div>
+    <div class="description"> flex-discription: column-reverse
+        <div class="flex column-reverse">
+            <div class="item">item-1</div>
+            <div class="item">item-2</div>
+            <div class="item">item-3</div> 
+        </div>
+    </div>
+
+    <h2>FLEX GROW, FLEX SHRINK, FLEX BASIS</h2>
+    <div style="resize: vertical; height:500px; overflow: auto">
+    <div class="item" style="height: 100px"> item1</div>
+    <div class="item" style="height: 300px"> item2</div>
+    <div class="item" style="height: 100px"> item3</div>
+    </div>
+<br>
+    <div class="description"> item 1/3 shrink: 0, item2 grow: 1</div>
+    <div class="flex column" style="resize: vertical; height: 500px; overflow: auto">
+        <div class="item" style="flex-basis: 100px; flex-shrink: 0">item1</div>
+        <div class="item" style="flex-basis: 300px; flex-grow: 1">item2</div>
+        <div class="item" style="flex-basis: 100px; flex-shrink:0">item3</div>
+    </div>
+<h2>flex의 정렬</h2>
+<div class="description">수평정렬style=justify-content: flex-end/ center/ space-between/ space-around/space-evenly</div>
+<br>
+<div class="description">수직정렬style=height: 100px지정; align-item: stretch(기본값)/flex-start/center/flex-end</div>   
+
+<h2>flex의 wrap</h2>
+<div class="description">
+    4) resize: horizontal; overflow: auto를 하고 안하고의 차이?
+</div>
+<div class="flex wrap-container" style="flex-wrap:wrap; resize: horizontal; overflow: auto"></div>
+<div class="flex wrap-conainer" style="flex-wrap: wrap"></div>
+</div>
+    </div>
+    </body>
+</html>
+<style>
+    .description {
+        padding:16px; margin-top:16px; margin-bottom: 16px; background-color: azure;
+    }
+    .square {
+        width: 100px; height: 100px; border:1px solid blue; background-color: burlywood;
+    }
+    .item {background-color: burlywood; border:1px solid orange}
+    .inline-block {display: inline-block;}
+    .flex {display: flex;}
+    .flex.row {flex-direction: row;}
+    .flex.row-reverse {flex-direction: row-reverse;}
+    .flex.column {flex-direction: column;}
+    .flex.column-reverse {flex-direction: column-reverse;}
+    .align-container {border:0.5px solid red}
+    .wrap-container {width: 720px; padding: 10px; border: 0.5px dashed red; margin-bottom:10px}
+</style>

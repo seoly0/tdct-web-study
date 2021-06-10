@@ -6,6 +6,7 @@
         <br>
             <span class="label">input[type=text]</span>
             <div class="input-wrapper"> <input type="text" oninput="onTextInput(value)"></div>
+            <span id="text"></span>
         <br>
             <span class="label">input[type=email]</span>
             <div class="input-wrapper"> <input type="email" oninput="onEmailInput(value)"></div>
@@ -31,13 +32,13 @@
         <br>
             <span class="label">select</span>
             <div class="input-wrapper"><select oninput="onSelect(value)">
-            <option disabled ="" select="">선택하세요</option>
+            <option disabled selected>선택하세요</option>
                 <option value="I am">나는</option>
                 <option value="romantic">낭만</option>
                 <option value="cat">고양이</option>
                 <option value=":)">ㅋㅋ</option>
         </select></div>
-            <span id="selecct"></span>
+            <span id="select"></span>
 
 <script lang="javascript">
     function onTextInput(value) {

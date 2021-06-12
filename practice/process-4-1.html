@@ -4,24 +4,25 @@
     <!-- flex로 레이아웃을 구성할 때 가장 먼저 생각해야 할 부분은 flex-direction입니다. -->
     <!-- 무작정 코드를 작성하기보다는 내가 만들어야 할 레이아웃을 먼저 종이에 그리고 묶어보세요. -->
     <!-- 이번 예제의 경우에는 -->
-    <!--   1       2        (1 = .layout-navigator, 2 = .layout-main)
-          +--+-----------+
-          |  |           |
-          |  |           | <---------- .layout-container
-          |  |           |
-          +--+-----------+
+    <!-- 1       2        (1 = .layout-navigator, 2 = .layout-main)
+        +--+-----------+
+        |  |           |
+        |  |           | <---------- .layout-container
+        |  |           |
+        +--+-----------+
      -->
      <!-- 이렇게 수평방향 즉, row 방향의 flex가 등장하죠. 그렇다면 가장 바깥 요소인 layout-container의 flex-direction은 row입니다. -->
      <!-- row는 기본값이니 특별히 지정하지 않아도 됩니다만 굳이 지정하겠습니다. -->
 
      <!-- 그 다음은 .layout-main안에 .layout-header와 .layout-content가 어떻게 배치되어있는지 봅시다. -->
      <!-- 
-          +-----------+
-          |           | <--------- .layout-header
-          +-----------+
-          |           | <--------- .layout-content
-          |           |
-          +-----------+
+        .layout-main
+        +-----------+
+        |           | <--------- .layout-header
+        +-----------+
+        |           | <--------- .layout-content
+        |           |
+        +-----------+
       -->
       <!-- 이번에는 수직방향, 즉 column 방향의 flex입니다. 따라서 .layout-main의 flex-direction은 column이 되는 거죠 -->
       <!-- 이렇게 가장 바깥에서부터 방향을 파악하면서 잡으면 어렵지 않게 flex로 레이아웃을 구성할 수 있습니다. -->

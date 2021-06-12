@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="layout-container">
+      <div class="layout-header"></div>
+      <div class="layout-main">
+        <div class="layout-navigator"></div>
+        <div class="layout-content-wrapper">
+          <div class="layout-content">
+            <div class="inner-left">
+              <div class="inner-left-top"></div>
+              <div class="inner-left-down"></div>
+            </div>
+            <div class="inner-right"></div>
+          </div>
+          <div class="layout-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .layout-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .layout-navigator {
+      flex-basis: 200px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: orange;
+    }
+    .layout-main {
+      flex-basis: 720px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      display: flex;
+    }
+    .layout-header {
+      flex-basis: 120px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: yellow;
+    }
+    .layout-content-wrapper {
+      flex-grow: 1;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .layout-content {
+      flex-basis: 560px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      background-color: yellowgreen;
+      display: flex;
+    }
+    .inner-left {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .inner-left-top {
+      flex-grow: 1;
+      background-color: aquamarine;
+    }
+    .inner-left-down {
+      flex-grow: 1;
+    }
+    .inner-right {
+      flex-grow: 1;
+      background-color: white;
+    }
+    .layout-footer {
+      flex-basis: 120px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: yellow;
+    }
+  </style>
+</html>

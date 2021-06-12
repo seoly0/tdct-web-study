@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="layout-container">
+      <div class="layout-header"></div>
+      <div class="layout-main">
+        <div class="layout-navigator"></div>
+        <div class="layout-content-wrapper">
+          <div class="layout-navigator flex justify-end" style="background-color: orchid;">
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+            <div class="flex-item"></div>
+          </div>
+          <div class="layout-content">
+            <div class="inner-left"></div>
+            <div class="inner-right">
+              <div class="inner-right-top"></div>
+              <div class="inner-right-down"></div>
+            </div>
+          </div>
+        </div>
+        <div class="layout-navigator"></div>
+      </div>
+      <div class="layout-footer"></div>
+    </div>
+  </body>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .layout-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .layout-navigator {
+      flex-basis: 200px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: orange;
+    }
+    .flex {
+      display: flex;
+    }
+    .justify-end {
+      justify-content: flex-end;
+    }
+    .flex-item {
+      background-color: palegreen;
+      height: 100px;
+      width: 100px;
+      margin: 12px;
+    }
+    .layout-main {
+      flex-basis: 720px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      display: flex;
+    }
+    .layout-header {
+      flex-basis: 120px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: yellow;
+    }
+    .layout-content-wrapper {
+      flex-grow: 1;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .layout-content {
+      flex-basis: 560px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      background-color: yellowgreen;
+      display: flex;
+    }
+    .inner-left {
+      flex-grow: 1;
+    }
+    .inner-right {
+      flex-grow: 1;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+    }
+    .inner-right-top {
+      flex-grow: 1;
+      background-color: aquamarine;
+    }
+    .inner-right-down {
+      flex-grow: 1;
+    }
+    .layout-footer {
+      flex-basis: 120px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: yellow;
+    }
+  </style>
+</html>

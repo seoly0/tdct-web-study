@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="layout-container">
+      <div class="layout-header"></div>
+      <div class="layout-main">
+        <div class="layout-content">
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+          <div class="flex-item"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .layout-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .layout-main {
+      flex-basis: 720px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      display: flex;
+    }
+    .layout-header {
+      flex-basis: 120px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: yellow;
+    }
+    .layout-content {
+      flex-basis: 560px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      background-color: yellowgreen;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: flex-start;
+      padding:60px;
+    }
+    .flex-item {
+      height: 300px;
+      flex-basis: 300px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      background-color: blue;
+      margin: 32px;
+    }
+  </style>
+</html>

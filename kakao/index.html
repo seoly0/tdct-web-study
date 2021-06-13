@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>카카오톡</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+        src: local('Material Icons'),
+          local('MaterialIcons-Regular'),
+          url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+          url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+          url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+      }
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        color: #78828B;
+
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chatroom">
+      <div class="chatroom-header">
+        <div class="chatroom-header-inner">
+          <div class="other-thumbnail">
+            <img class="other-thumbnail-img" src="https://blog.kakaocdn.net/dn/U1kqn/btq4MRTSBYl/OlG4pfKMstkozTAQVKagik/img.jpg">
+          </div>
+          <div style="flex-grow: 1; margin-left: 8px;">
+            <div class="other-name">이호창</div>
+            <div>
+              <span class="material-icons">folder_open</span>
+              <span class="material-icons">search</span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span class="material-icons">minimize</span>
+              <span class="material-icons">crop_square</span>
+              <span class="material-icons">close</span>
+            </div>
+            <div>
+              <span class="material-icons">notifications</span>
+              <span class="material-icons">dehaze</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chatroom-body">
+
+        <div class="my" style="display: flex; flex-direction: row-reverse;">
+          <div>
+            <div class="my-message">메시지입니다.</div>
+          </div>
+          <div class="message-time" style="align-self: flex-end; font-size: 12px; margin: 0 4px;">
+            오후 6:23
+          </div>
+        </div>
+
+        <div class="other" style="display: flex;">
+          <div class="other-thumbnail">
+            <img class="other-thumbnail-img" src="https://blog.kakaocdn.net/dn/U1kqn/btq4MRTSBYl/OlG4pfKMstkozTAQVKagik/img.jpg">
+          </div>
+          <div style="margin-left: 8px;">
+            <div class="other-name">이호창</div>
+            <div class="other-message">메시지입니다.</div>
+            <div class="other-message">메시지입니다.</div>
+          </div>
+          <div class="message-time" style="align-self: flex-end; font-size: 12px; margin: 0 4px;">
+            오후 6:23
+          </div>
+        </div>
+
+        <div class="my" style="display: flex; flex-direction: row-reverse;">
+          <div>
+            <div class="my-message">메시지입니다.</div>
+            <div class="my-message">메시지입니다.</div>
+          </div>
+          <div class="message-time" style="align-self: flex-end; font-size: 12px; margin: 0 4px;">
+            오후 6:23
+          </div>
+        </div>
+        
+      </div>
+      <div class="chat-input-wrapper">
+        <div style="flex-grow: 1; display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; padding: 8px;">
+            <textarea class="chat-input-text"></textarea>
+          </div>
+          <div style="padding: 8px;">
+            <span class="material-icons">emoji_emotions</span>
+            <span class="material-icons">attachment</span>
+            <span class="material-icons">phone</span>
+            <span class="material-icons">assignment_turned_in</span>
+            <span class="material-icons">crop_free</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="flex-grow: 1; padding: 8px;">
+            <button class="chat-button-submit">전송</button>
+          </div>
+          <div>
+            <!-- <input type="range"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height:100%;
+      overflow: hidden;
+    }
+    .chatroom {
+      width: 100%;
+      height:100%;
+      display: flex; flex-direction: column;
+    }
+    .chatroom-header {
+      color: #78828B;
+      background-color: #A9BDCE;
+      flex-shrink: 0;
+      flex-basis: 70px;
+    }
+    .chatroom-header-inner {
+      padding: 8px 16px;
+      display: flex;
+    }
+    .chatroom-body {
+      background-color: #B2C7D9;
+      flex-grow: 1;
+      overflow-y:auto;
+      min-height: 233px;
+      padding: 16px;
+    }
+    .my-message {
+      background-color: #FFEB33;
+      font-size: 14px;
+      border-radius: 3px;
+      padding: 6px;
+      margin-top: 8px;
+      box-shadow: 0 2px 2px #AAAAAA;
+    }
+    .other-thumbnail {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #A9BDCE;
+      background-color: white;
+      overflow: hidden;
+    }
+    .other-thumbnail-img {
+      width: 100%;
+      height: 100%;
+    }
+    .other-name {
+      font-size: 14px;
+    }
+    .other-message {
+      background-color: #ffffff;
+      font-size: 14px;
+      border-radius: 3px;
+      padding: 6px;
+      margin-top: 8px;
+      box-shadow: 0 2px 2px #AAAAAA;
+    }
+    .chat-input-wrapper {
+      background-color: #ffffff;
+      flex-shrink: 0;
+      flex-basis:100px;
+      display: flex;
+    }
+    .chat-input-text {
+      border: none;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      resize: none;
+    }
+    .chat-button-submit {
+      background-color: #FFEB33;
+      padding: 4px 10px;
+      border: 1px solid #e7d52e;
+      border-radius: 2px;
+    }
+  </style>
+</html>

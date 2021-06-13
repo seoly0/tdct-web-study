@@ -1,0 +1,77 @@
+<html>
+    <body>
+        <div class="layout-container">
+            <div class="layout-header"></div>
+            <div class="layout-main">
+                <div class="layout-navigator"></div>
+                <div class="layout-content-wrapper">
+                    <div class="layout-content">
+                        <div class="inner-left">
+                            <div class="inner-left-top"></div><div class="inner-left-down"></div>
+                        </div>
+                        <div class="innner-right"></div>
+                    <div class="layout-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<style>
+    body,
+    html {
+        margin:0; padding:0; height:100%
+    }
+    .layout-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%
+    }
+    .layout-navigator {
+        flex-basis: 200px; 
+        flex-grow: 0; flex-shrink: 0;
+        background-color: orange;
+    }
+    .layout-main {
+        display: flex;
+        flex-basis: 720px;
+        flex-grow: 1; flex-shrink: 0;
+    }
+    .layout-header {
+        flex-basis: 120px;
+        flex-grow: 0; flex-shrink: 0;
+        background-color: yellow;
+    }
+    .layout-content-wrapepr {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; flex-shrink: 0;
+    }
+    .layout-content {
+        display: flex;
+        flex-basis: 560px;
+        flex-grow: 1; flex-shrink: 0;
+        background-color: beige;
+    }
+    .inner-left {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .inner-left-top {
+        flex-grow: 1;
+        background-color: aquamarine;
+    }
+    .inner-left-down {
+        flex-grow: 1;
+    }
+    .inner-right {
+        flex-grow: 1;
+        background-color: white;
+    }
+    .layout-footer {
+        flex-basis: 120px;
+        flex-grow: 0; flex-shrink: 0;
+        background-color: yellow;
+    }
+</style>

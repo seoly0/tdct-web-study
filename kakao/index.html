@@ -6,55 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 중요 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <!-- ======================================================================================================================= -->
-    <!-- 
-      이번 예제에서는 구글의 Meterial Icons을 사용해보겠습니다.
-      구글 아이콘을 사용하기 위해서는 아래 코드가 꼭 포함되어야 합니다. ↓↓↓↓↓↓↓↓
-     -->
+    <!--  이번 예제에서는 구글의 Meterial Icons을 사용해보겠습니다.구글 아이콘을 사용하기 위해서는 아래 코드가 꼭 포함되어야 합니다.-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-      /* 
-        구글에서 제공하는 아이콘들을 사용하기 위한 스타일 코드들입니다. 뭐가 괜히 많고 어려워 보이는데요. 
-        단순히 --> https://developers.google.com/fonts/docs/material_icons 에서 구글이 제공해주는 코드를 복붙한 것 뿐입니다.
-        읽어보셔도 괜찮지만... 저는 영어울렁증이 있어서 관두겠습니다.
-        여러분도 그냥 아래 코드 복붙해서 사용하시면 됩니다.
-        아이콘 사용 방법은 아래에서 다시 설명할게요!
-       */
-      @font-face {
-        font-family: 'Material Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-        src: local('Material Icons'),
-          local('MaterialIcons-Regular'),
-          url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-          url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-          url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-      }
-      .material-icons {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 16px;  /* Preferred icon size */
-        display: inline-block;
-        line-height: 1;
-        text-transform: none;
-        letter-spacing: normal;
-        word-wrap: normal;
-        white-space: nowrap;
-        direction: ltr;
-        color: #78828B;
-        /* Support for all WebKit browsers. */
-        -webkit-font-smoothing: antialiased;
-        /* Support for Safari and Chrome. */
-        text-rendering: optimizeLegibility;
-
-        /* Support for Firefox. */
-        -moz-osx-font-smoothing: grayscale;
-
-        /* Support for IE. */
-        font-feature-settings: 'liga';
-      }
-    </style>
     <!-- ======================================================================================================================= -->
   </head>
   <body>
@@ -195,6 +148,14 @@
       height:100%;
       overflow: hidden;
     }
+    /*
+      구글 아이콘은 material-icons 이라는 클래스 네임으로 사용됩니다.
+      material-icons에 추가적으로 폰트사이즈나 아이콘 색상을 지정할 수 있습니다. 
+    */
+    .material-icons {
+        font-size: 16px;  /* Preferred icon size */
+        color: #78828B;
+      }
     /* 
       모든 css클래스 네임은 제가 멋대로 짓는겁니다. chatroom 이런거요. 크게 신경 안쓰셔도 됩니다...
       실무에서는 팀원간에 정해진 네이밍 규칙에 따라 작성하는 것이 맞지만

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta http-equiv="COntent-Type" content="text/html;charset=UTF-8">
+		<title>4-1풀이</title>
+	</head>
+
+	<body>
+
+		<div class="layout-container">
+			<div class="layout-navigator"></div>
+			<div class="layout-main">
+				<div class="layout-header"></div>
+				<div class="layout-content"></div>
+			</div>
+		</div>
+
+		<style>
+			body, html {
+				margin :0;
+				padding: 0;
+				height: 100%
+			}
+			.layout-container {
+				display: flex;
+				flex-direction: row;
+				height: 100%;
+			}
+			.layout-navigator {
+				flex: 0 0 200px;
+				background-color: orange;
+			}
+			.layout-main {
+				flex: 1 0 720px;
+				display: flex;
+				flex-direction: column;
+			}
+			.layout-header {
+				flex: 0 0 120px;
+				background-color: yellow;
+			}
+			.layout-content {
+				flex: 0 0 560px;
+				background-color: yellowgreen;
+			}
+		</style>
+		
+	</body>
+	
+	</html>

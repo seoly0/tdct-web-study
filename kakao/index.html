@@ -2,9 +2,23 @@
 <html>
   <head>
     <title>카카오톡</title>
+    <!-- 모바일에서도 정상적으로 화면을 표시하기 위해서 viewport를 설정합니다. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 중요 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- ======================================================================================================================= -->
+    <!-- 
+      이번 예제에서는 구글의 Meterial Icons을 사용해보겠습니다.
+      구글 아이콘을 사용하기 위해서는 아래 코드가 꼭 포함되어야 합니다. ↓↓↓↓↓↓↓↓
+     -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+      /* 
+        구글에서 제공하는 아이콘들을 사용하기 위한 스타일 코드들입니다. 뭐가 괜히 많고 어려워 보이는데요. 
+        단순히 --> https://developers.google.com/fonts/docs/material_icons 에서 구글이 제공해주는 코드를 복붙한 것 뿐입니다.
+        읽어보셔도 괜찮지만... 저는 영어울렁증이 있어서 관두겠습니다.
+        여러분도 그냥 아래 코드 복붙해서 사용하시면 됩니다.
+        아이콘 사용 방법은 아래에서 다시 설명할게요!
+       */
       @font-face {
         font-family: 'Material Icons';
         font-style: normal;
@@ -29,8 +43,6 @@
         white-space: nowrap;
         direction: ltr;
         color: #78828B;
-
-
         /* Support for all WebKit browsers. */
         -webkit-font-smoothing: antialiased;
         /* Support for Safari and Chrome. */
@@ -43,76 +55,122 @@
         font-feature-settings: 'liga';
       }
     </style>
+    <!-- ======================================================================================================================= -->
   </head>
   <body>
     <div class="chatroom">
+
+      <!-- 상단 채팅방 정보 및 액션버튼 영역 -->
       <div class="chatroom-header">
         <div class="chatroom-header-inner">
           <div class="other-thumbnail">
             <img class="other-thumbnail-img" src="https://blog.kakaocdn.net/dn/U1kqn/btq4MRTSBYl/OlG4pfKMstkozTAQVKagik/img.jpg">
           </div>
-          <div style="flex-grow: 1; margin-left: 8px;">
+          <div class="chatroom-header-name">
             <div class="other-name">이호창</div>
             <div>
+              <!-- 
+                ↓↓↓↓ 구글 아이콘 사용 방법입니다. ↓↓↓↓
+                <span class="material-icons">아이콘이름</span>
+                쉽죠?
+                아이콘이름은 https://fonts.google.com/icons 에서 맘에 드시는 아이콘을 클릭해보시면 알 수 있습니다...
+                다른 아이콘도 한 번 사용해보시면 좋을 것 같습니다.
+               -->
               <span class="material-icons">folder_open</span>
               <span class="material-icons">search</span>
             </div>
           </div>
-          <div>
-            <div>
+          <div class="chatroom-header-action-buttons-wrapper">
+            <div class="chatroom-header-action-buttons">
               <span class="material-icons">minimize</span>
               <span class="material-icons">crop_square</span>
               <span class="material-icons">close</span>
             </div>
-            <div>
-              <span class="material-icons">notifications</span>
-              <span class="material-icons">dehaze</span>
+            <div class="chatroom-header-action-buttons">
+              <div style="display: flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background-color: #A4B7C8;">
+                <span class="material-icons">notifications</span>
+              </div>
+              <div style="display: flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background-color: #A4B7C8;">
+                <span class="material-icons">dehaze</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- 중간 채팅 영역 -->
       <div class="chatroom-body">
 
-        <div class="my" style="display: flex; flex-direction: row-reverse;">
-          <div>
-            <div class="my-message">메시지입니다.</div>
+        <!-- 나의 채팅 -->
+        <div class="my-chat">
+          <div class="my-message-wrapper">
+            <div class="my-message">누구세요?</div>
           </div>
-          <div class="message-time" style="align-self: flex-end; font-size: 12px; margin: 0 4px;">
+          <div class="message-time">
             오후 6:23
           </div>
         </div>
 
-        <div class="other" style="display: flex;">
+        <!-- 상대의 채팅 -->
+        <div class="other-chat">
           <div class="other-thumbnail">
             <img class="other-thumbnail-img" src="https://blog.kakaocdn.net/dn/U1kqn/btq4MRTSBYl/OlG4pfKMstkozTAQVKagik/img.jpg">
           </div>
-          <div style="margin-left: 8px;">
+          <div class="other-message-wrapper">
             <div class="other-name">이호창</div>
-            <div class="other-message">메시지입니다.</div>
-            <div class="other-message">메시지입니다.</div>
+            <div class="other-message">인사 드립니다.</div>
+            <div class="other-message">이호창이라고 해요.</div>
           </div>
-          <div class="message-time" style="align-self: flex-end; font-size: 12px; margin: 0 4px;">
-            오후 6:23
+          <div class="message-time">
+            오후 6:24
           </div>
         </div>
 
-        <div class="my" style="display: flex; flex-direction: row-reverse;">
-          <div>
-            <div class="my-message">메시지입니다.</div>
-            <div class="my-message">메시지입니다.</div>
+        <!-- 나의 채팅 -->
+        <div class="my-chat">
+          <div class="my-message-wrapper">
+            <div class="my-message">버릇이 좀 없으시네요.</div>
+            <div class="my-message">다시 소개 하세요.</div>
           </div>
-          <div class="message-time" style="align-self: flex-end; font-size: 12px; margin: 0 4px;">
-            오후 6:23
+          <div class="message-time">
+            오후 6:25
+          </div>
+        </div>
+
+        <!-- 상대의 채팅 -->
+        <div class="other-chat">
+          <div class="other-thumbnail">
+            <img class="other-thumbnail-img" src="https://blog.kakaocdn.net/dn/U1kqn/btq4MRTSBYl/OlG4pfKMstkozTAQVKagik/img.jpg">
+          </div>
+          <div class="other-message-wrapper">
+            <div class="other-name">이호창</div>
+            <div class="other-message">김갑생할머니김<br> 미래전략실 전략본부장</div>
+            <div class="other-message">이호창이라고 합니다.</div>
+          </div>
+          <div class="message-time">
+            오후 6:26
           </div>
         </div>
         
+        <!-- 나의 채팅 -->
+        <div class="my-chat">
+          <div class="my-message-wrapper">
+            <div class="my-message">아버지한테 반항하지 마세요.</div>
+          </div>
+          <div class="message-time">
+            오후 6:27
+          </div>
+        </div>
+
       </div>
-      <div class="chat-input-wrapper">
-        <div style="flex-grow: 1; display: flex; flex-direction: column;">
-          <div style="flex-grow: 1; padding: 8px;">
+
+      <!-- 하단 채팅 입력 영역 -->
+      <div class="chat-bottom-container">
+        <div class="chat-bottom-left">
+          <div class="chat-input-wrapper">
             <textarea class="chat-input-text"></textarea>
           </div>
-          <div style="padding: 8px;">
+          <div class="chat-icons-wrapper">
             <span class="material-icons">emoji_emotions</span>
             <span class="material-icons">attachment</span>
             <span class="material-icons">phone</span>
@@ -120,17 +178,15 @@
             <span class="material-icons">crop_free</span>
           </div>
         </div>
-        <div style="display: flex; flex-direction: column;">
-          <div style="flex-grow: 1; padding: 8px;">
-            <button class="chat-button-submit">전송</button>
-          </div>
-          <div>
-            <!-- <input type="range"> -->
+        <div class="chat-bottom-right">
+          <div class="chat-button-wrapper">
+            <button class="chat-button">전송</button>
           </div>
         </div>
       </div>
     </div>
   </body>
+
   <style>
     html, body {
       margin: 0;
@@ -139,11 +195,18 @@
       height:100%;
       overflow: hidden;
     }
+    /* 
+      모든 css클래스 네임은 제가 멋대로 짓는겁니다. chatroom 이런거요. 크게 신경 안쓰셔도 됩니다...
+      실무에서는 팀원간에 정해진 네이밍 규칙에 따라 작성하는 것이 맞지만
+      우리 회사에서 이 부분은 제가 전담하기 때문에 따로 규칙..이 없습니다.
+    */
     .chatroom {
       width: 100%;
       height:100%;
       display: flex; flex-direction: column;
     }
+
+    /* 상단 채팅방 정보 및 액션버튼 영역 */
     .chatroom-header {
       color: #78828B;
       background-color: #A9BDCE;
@@ -154,6 +217,24 @@
       padding: 8px 16px;
       display: flex;
     }
+    .chatroom-header-name {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-grow: 1;
+      margin-left: 8px;
+    }
+    .chatroom-header-action-buttons-wrapper {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .chatroom-header-action-buttons {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* 중간 채팅 영역 */
     .chatroom-body {
       background-color: #B2C7D9;
       flex-grow: 1;
@@ -161,8 +242,41 @@
       min-height: 233px;
       padding: 16px;
     }
+    .message-time {
+      align-self: flex-end;
+      font-size: 12px;
+      margin: 0 4px;
+    }
+    .my-chat {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-bottom: 16px;
+    }
+    .my-message-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
     .my-message {
       background-color: #FFEB33;
+      font-size: 14px;
+      border-radius: 3px;
+      padding: 6px;
+      margin-top: 8px;
+      box-shadow: 0 2px 2px #AAAAAA;
+    }
+    .other-chat{
+      display: flex;
+      margin-bottom: 16px;
+    }
+    .other-message-wrapper {
+      margin-left: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .other-message {
+      background-color: #ffffff;
       font-size: 14px;
       border-radius: 3px;
       padding: 6px;
@@ -184,19 +298,26 @@
     .other-name {
       font-size: 14px;
     }
-    .other-message {
-      background-color: #ffffff;
-      font-size: 14px;
-      border-radius: 3px;
-      padding: 6px;
-      margin-top: 8px;
-      box-shadow: 0 2px 2px #AAAAAA;
-    }
-    .chat-input-wrapper {
+
+    /* 하단 채팅 입력 영역 */
+    .chat-bottom-container {
       background-color: #ffffff;
       flex-shrink: 0;
       flex-basis:100px;
       display: flex;
+    }
+    .chat-bottom-left {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-bottom-right {
+      display: flex;
+      flex-direction: column;
+    }
+    .chat-input-wrapper {
+      flex-grow: 1;
+      padding: 8px;
     }
     .chat-input-text {
       border: none;
@@ -205,7 +326,14 @@
       height: 100%;
       resize: none;
     }
-    .chat-button-submit {
+    .chat-icons-wrapper {
+      padding: 8px;
+    }
+    .chat-button-wrapper {
+      flex-grow: 1;
+      padding: 8px;
+    }
+    .chat-button {
       background-color: #FFEB33;
       padding: 4px 10px;
       border: 1px solid #e7d52e;

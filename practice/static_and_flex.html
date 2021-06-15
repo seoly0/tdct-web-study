@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 0;
+        height: 100%;
+      }
+      body {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .percent-container {
+        width: 100%;
+        background-color: greenyellow;
+        min-height: 60px;
+        padding: 16px;
+      }
+      .percent-item {
+        height: 40px;
+        width: 25%;
+        background-color: orange;
+        outline: 1px solid grey;
+        display: inline-block;
+      }
+      .flex-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: greenyellow;
+        min-height: 60px;
+        padding: 16px;
+      }
+      .flex-item {
+        height: 40px;
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 25%;
+        background-color: aquamarine;
+        outline: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="addNewPercentItem()">퍼센트 아이템 추가</button>
+    </div>
+    <div id="percent-contianer" class="percent-container"></div>
+    <div>
+      <button onclick="addNewFlexItem()">플렉스 아이템 추가</button>
+    </div>
+    <div id="flex-container" class="flex-container"></div>
+  </body>
+  <script>
+    function addNewPercentItem() {
+      let el = document.getElementById("percent-contianer");
+      let child = document.createElement("div");
+      child.classList.add("percent-item");
+      el.append(child);
+    }
+
+    function addNewFlexItem() {
+      let el = document.getElementById("flex-container");
+      let child = document.createElement("div");
+      child.classList.add("flex-item");
+      el.append(child);
+    }
+  </script>
+</html>

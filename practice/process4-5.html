@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html;charset-8">
+		<title>4-5풀이</title>
+	</head>
+	<body>
+		<div class="layout-container">
+			<div class="layout-header"></div>
+			<div class="layout-main">
+				<div class="layout-navigator"></div>
+				<div class="layout-content-wrapper">
+					<div class="layout-navigator flex justify-end" style="background-color: orchid;">
+						<div class="flex-item"></div>
+						<div class="flex-item"></div>
+						<div class="flex-item"></div>
+						<div class="flex-item"></div>
+					</div>
+					<div class="layout-content">
+						<div class="inner-left"></div>
+						<div class="inner-right">
+							<div class="inner-right-top"></div>
+							<div class="inner-right-bottom"></div>
+						</div>
+					</div>
+				</div>
+				<div class="layout-navigator"></div>
+			</div>
+			<div class="layout-footer"></div>
+		</div>
+	</body>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		.layout-container {
+			display: flex;
+			flex-direction: column;
+			height: 100%
+		}
+		.layout-header {
+			flex: 0 0 120px;
+			background-color: yellow;
+		}
+		.layout-main {
+			flex: 1 0 720px;
+			display: flex;
+		}
+		.layout-navigator {
+			flex: 0 0 200px;
+			background-color: orange;
+		}
+		.layout-content-wrapper {
+			flex: 1 0 496px;
+			display: flex;
+			flex-direction: column;
+		}
+		.flex {
+			display: flex;
+		}
+		.justify-end {
+			justify-content: flex-end;
+		}
+		.flex-item {
+			width: 100px;
+			height: 100px;
+			margin: 12px;
+			background-color: palegreen;
+		}
+		.layout-content {
+			flex: 1 0 560px;
+			display: flex;
+		}
+		.inner-left{
+			flex-grow: 1;
+			background-color: yellowgreen;
+		}
+		.inner-right {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+		}
+		.inner-right-top {
+			flex-grow: 1;
+			background-color: aquamarine;
+		}
+		.inner-right-bottom {
+			flex-grow: 1;
+			background-color: white;
+		}
+		.layout-footer {
+			flex: 0 0 120px;
+			background-color: yellow;
+		}
+	</style>
+</html>

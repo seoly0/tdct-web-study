@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>4-4풀이</title>
+	</head>
+	<body>
+		<div class="layout-container">
+			<div class="layout-header"></div>
+			<div class="layout-main">
+				<div class="layout-navigator"></div>
+				<div class="layout-content-wrapper">
+					<div class="layout-content">
+						<div class="inner-left">
+							<div class="inner-left-top"></div>
+							<div class="inner-left-bottom"></div>
+						</div>
+						<div class="inner-right"></div>
+					</div>
+					<div class="layout-footer"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%
+		}
+		.layout-container {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+		.layout-header {
+			flex: 0 0 120px;
+			background-color: yellow;
+		}
+		.layout-main {
+			display: flex;
+			flex-direction: row;
+			flex: 1 0 720px;
+		}
+		.layout-navigator{
+			flex: 0 0 200px;
+			background-color: orange;
+		}
+		.layout-content-wrapper {
+			display: flex;
+			flex-direction: column;
+			flex: 1 0 auto;
+		}
+		.layout-content {
+			display: flex;
+			flex: 1 0 600px;
+			/* 왜 600이 아니라 560인지 모르겠어요ㅠㅠ */
+		}
+		.inner-left {
+			display: flex;
+			flex-direction: column;
+			flex: 1 0 auto;
+		}
+		.inner-left-top {
+			flex: 1 0 auto;
+			background-color: aquamarine;
+		}
+		.inner-left-bottom {
+			flex: 1 0 auto;
+			background-color: yellowgreen;
+		}
+		.inner-right {
+			flex: 1 0 auto;
+			background-color: white;
+		}
+		.layout-footer {
+			flex: 0 0 120px;
+			background-color: yellow;
+		}
+	</style>
+</html>

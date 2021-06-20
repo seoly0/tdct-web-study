@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>카카오톡</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    </head>
+    <body>
+        <div class="chatroom">
+            <div class="header">
+                    <div><span class="material-icons">arrow_back</span></div>
+                    <div class="header-name">이호창</div>
+        
+                <div class="buttons">
+                    <span class="material-icons">search</span>
+                    <span class="material-icons">dehaze</span>
+                </div> 
+     
+            </div>
+            <div class="body">
+                <div class="my-chat">
+                    <div class="my-wrapper">
+                        <div class="my-text">누구세요?</div>
+                    </div>
+                    <div class="text-time">오후 6:23</div>
+                </div>
+                <div class="other-chat">
+                    <div class="other-thumbnail">
+                        <img class="other-thumbnail-img" src="https://blog.kakaocdn.net/dn/U1kqn/btq4MRTSBYl/OlG4pfKMstkozTAQVKagik/img.jpg">
+                    </div>
+                    <div class="other-wrapper">
+                        <div class="other-name">이호창</div>
+                        <div class="other-text">인사드립니다.</div>
+                        <div class="other-text">이호창이라고 해요</div>
+                    </div>
+                    <div class="text-time">오후 6:24</div>
+                </div>
+                <div class="my-chat">
+                    <div class="my-wrapper">
+                        <div class="my-text">버릇이 좀 없으시네요.</div>
+                        <div class="my-text">다시 소개 하세요.</div>
+                    </div>
+                    <div class="text-time">오후 6:25</div>
+                </div>
+                <div class="other-chat">
+                    <div class="other-thumbnail">
+                        <img class="other-thumbnail-img" src="https://blog.kakaocdn.net/dn/U1kqn/btq4MRTSBYl/OlG4pfKMstkozTAQVKagik/img.jpg">
+                    </div>
+                    <div class="other-wrapper">
+                        <div class="other-name">이호창</div>
+                        <div class="other-text">김갑생할머니김<br>미래전략실 전략본부장</div>
+                        <div class="other-text">이호창이라고 합니다.</div>
+                    </div>
+                    <div class="text-time">오후 6:26</div>
+                </div>
+                <div class="my-chat">
+                    <div class="my-wrapper">
+                        <div class="my-text">아버지한테 반항하지 마세요.</div>
+                    </div>
+                    <div class="text-time">오후 6:27</div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <span class="material-icons">add-box</span>
+                    <textarea class="textinput"></textarea>
+                </div>       
+                <div class="bottom-right">
+                    <div class="buttons">
+                        <span class="material-icons">emoji_emotions</span>
+                        <span class="material-icons">tag</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <style>
+        html, body {
+            margin:0; padding:0; width: 100%; height: 100%;
+        }
+        .material-icons {
+            font-size: 20px;
+        }
+        .chatroom {
+            display: flex; flex-direction: column; width: 100% ; height:100%;
+        }
+        .header {
+            display: flex; flex-basis:70px; flex-shrink:0; color: black; background-color: #b2c7d9; padding: 10px 20px
+        }
+        .header-name {
+            font-size: 16px; font-weight: 500; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .buttons {
+            display: flex; justify-content: flex-end;
+        }
+        body {
+            flex-grow: 1; overflow-y: auto; min-height: 300px; padding: 16px; background-color: #b2c7d9;
+        }
+        .my-chat {
+            display: flex; flex-direction: row-reverse; margin-bottom:16px
+        }
+        .my-wrapper {
+            display: flex; flex-direction: column; align-items: flex-end;
+        }
+        .my-text {
+            background-color: #ffeb33; font-size: 14px; border-radius: 3px; padding: 6px; margin-top:8px; box-shadow: 0 2px 2px #aaaaaa;
+        }
+        .text-time {
+            align-self: flex-end; font-size:12px; margin:0 4px; color: #78828B;
+        }
+        .other-chat {
+            display: flex; margin-bottom: 16px;
+        }
+        .other-wrapper {
+            display: flex; flex-direction: column; align-items: flex-start; margin-left:8px;
+        }
+        .other-text {
+            background-color: #ffffff; font-size: 14px; border-radius: 3px; padding: 6px; margin-top: 8px; box-shadow: 0 2px 2px #aaaaaa;
+        }
+        .other-thumbnail {
+            width:48px; height: 48px;border: 1px solid#a9bdce; border-radius: 50%;background-color: white; overflow: hidden;
+        }
+        .other-thumbnail-img {
+            width: 100%; height: 100%
+        }
+        .other-name {
+            font-size: 14px; color: #78828B;
+        }
+        .bottom {
+            display: flex; flex-basis: 30px; flex-shrink: 0; background-color: #ffffff;
+        }
+        .bottom-left {
+            display: flex; flex-direction: column; flex-grow: 1;
+        }
+        .bottom-right {
+            display: flex; flex-direction: column;
+        }
+        .textinput {
+            border: none; outline: none; width:100%; height:100%; resize: none;
+        }
+    
+    </style>
+</html>

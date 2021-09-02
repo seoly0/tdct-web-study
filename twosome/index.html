@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>투썸플레이스</title>
+    <style>
+      /* 스타일시트 변수 */
+      :root {
+        --nav-height: 90px;
+        --view-min-width: 1440px;
+        --view-max-width: 1920px;
+      }
+      /* 기본적으로 설정해두면 좋은 것들 */
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        font-size: 16px;
+        color: #222222;
+      }
+      main {
+        max-width: var(--view-max-width);
+        min-width: var(--view-min-width);
+        margin: 0 auto;
+      }
+      nav {
+        min-width: var(--view-min-width);
+      }
+      section {
+        min-width: var(--view-min-width);
+      }
+      /* 공통 스타일시트 */
+      .float-left {
+        float: left;
+      }
+      .float-right {
+        float: right;
+      }
+      .cursor-pointer {
+        cursor: pointer;
+      }
+      .text-white {
+        color: white;
+      }
+      /* 스크롤관련 */
+      html {
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory; /* proximity */
+      }
+      .anchor {
+        scroll-snap-align: start;
+        position: relative;
+        top: calc(-1 * var(--nav-height));
+      }
+      /* 컨텐츠 스타일시트 */
+      nav {
+        position: sticky;
+        top: 0;
+      }
+      nav a {
+        color: inherit;
+      }
+      nav > .gnb {
+        height: var(--nav-height);
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(72, 72, 72, 0.3);
+      }
+      nav > .gnb > .gnb-inner {
+        padding: 12px 0;
+        max-width: var(--view-min-width);
+        margin: 0 auto;
+      }
+      nav > .gnb > .gnb-inner > .left-side {
+        padding-top: 16px;
+      }
+      nav > .gnb > .gnb-inner > .left-side > .logo {
+        background-image: url("./bi_img_text.png");
+        display: inline-block;
+        width: 259px;
+        height: 36px;
+      }
+      nav > .gnb > .gnb-inner > .right-side {
+        padding-top: 20px;
+      }
+      nav > .gnb > .gnb-inner .menu-text {
+        font-size: 18px;
+        margin-left: 24px;
+        position: relative;
+      }
+      nav > .gnb > .gnb-inner .menu-text::before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 4px;
+        left: 0;
+        content: "";
+        border-bottom: 3px solid #999999;
+        transform: scaleX(0);
+        transition: all 0.12s ease-out;
+      }
+      nav > .gnb > .gnb-inner .menu-text:hover::before {
+        transform: scaleX(1);
+      }
+      section {
+        height: calc(100vh - var(--nav-height));
+        min-height: calc(720px - var(--nav-height));
+      }
+      section:nth-child(2n + 1) {
+        background-color: #cccccc;
+      }
+      section > .content {
+        max-width: var(--view-min-width);
+        margin: 0 auto;
+      }
+      section > .content.full-width {
+        max-width: 100%;
+      }
+      .banner {
+        background-image: url("./paint.jpg");
+        background-size: cover;
+        background-position-x: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="gnb">
+        <div class="gnb-inner">
+          <div class="left-side float-left">
+            <div class="logo"></div>
+          </div>
+          <div class="right-side float-right">
+            <a href="#first_anchor">
+              <div class="menu-text float-left cursor-pointer">메뉴이름</div>
+            </a>
+            <a href="#second_anchor">
+              <div class="menu-text float-left cursor-pointer">메뉴이름</div>
+            </a>
+            <a href="#third_anchor">
+              <div class="menu-text float-left cursor-pointer">메뉴이름</div>
+            </a>
+            <a href="#fourth_anchor">
+              <div class="menu-text float-left cursor-pointer">메뉴이름</div>
+            </a>
+            <a href="#fifth_anchor">
+              <div class="menu-text float-left cursor-pointer">메뉴이름</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="banner">
+        <div id="first_anchor" class="anchor"></div>
+        <div class="content full-width">
+          <span class="text-white">첫번째 섹션</span>
+        </div>
+      </section>
+      <section>
+        <div id="second_anchor" class="anchor"></div>
+        <div class="content">
+          <span>두번째 섹션</span>
+        </div>
+      </section>
+      <section>
+        <div id="third_anchor" class="anchor"></div>
+        <div class="content full-width">
+          <span>세번째 섹션</span>
+        </div>
+      </section>
+      <section>
+        <div id="fourth_anchor" class="anchor"></div>
+        <div class="content">
+          <span>네번째 섹션</span>
+        </div>
+      </section>
+      <section>
+        <div id="fifth_anchor" class="anchor"></div>
+        <div class="content full-width">
+          <span>다섯번째 섹션</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -120,6 +120,30 @@
         background-size: cover;
         background-position-x: center;
       }
+
+      .layered_image_wrapper {
+        position: relative;
+        width: 500px;
+        height: 500px;
+      }
+      .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .layer:hover {
+        opacity: 1;
+      }
+      .layer_text {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -159,7 +183,15 @@
       <section>
         <div id="second_anchor" class="anchor"></div>
         <div class="content">
-          <span>두번째 섹션</span>
+          <div class="layered_image_wrapper">
+            <div class="layer">
+              <span class="layer_text">나는야 텍스트</span>
+            </div>
+            <div
+              class="some_img"
+              style="background-color: yellow; width: 100%; height: 100%"
+            ></div>
+          </div>
         </div>
       </section>
       <section>

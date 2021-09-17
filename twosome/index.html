@@ -146,14 +146,19 @@
         right: 10px;
         color: white;
       }
-      .test {
+      .wrapper .test {
         border: 1px solid grey;
-        flex: 1 1 33%;
-        transition: flex-basis 0.2s;
+        flex: 1 1 0;
+        transition: flex-basis 0.2s, filter 0.2s;
         overflow-x: hidden;
       }
-      .test:hover {
+      .wrapper:hover .test {
+        filter: brightness(0.5);
+      }
+
+      .wrapper .test:hover {
         flex-basis: 80%;
+        filter: brightness(1);
       }
     </style>
   </head>
@@ -208,20 +213,26 @@
       <section>
         <div id="third_anchor" class="anchor"></div>
         <div class="content full-width">
-          <div style="display: flex">
-            <div class="test">
+          <div class="wrapper" style="display: flex">
+            <div class="test" tabindex="0">
               <img
                 style="display: block; width: 1000px"
                 src="https://image.ajunews.com/content/image/2021/05/14/20210514100219928435.jpg"
               />
             </div>
-            <div class="test">
+            <div class="test" tabindex="0">
               <img
                 style="display: block; width: 1000px"
                 src="https://image.ajunews.com/content/image/2021/05/14/20210514100219928435.jpg"
               />
             </div>
-            <div class="test">
+            <div class="test" tabindex="0">
+              <img
+                style="display: block; width: 1000px"
+                src="https://image.ajunews.com/content/image/2021/05/14/20210514100219928435.jpg"
+              />
+            </div>
+            <div class="test" tabindex="0">
               <img
                 style="display: block; width: 1000px"
                 src="https://image.ajunews.com/content/image/2021/05/14/20210514100219928435.jpg"

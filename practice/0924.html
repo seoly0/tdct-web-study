@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 0;
+        height: 100%;
+      }
+      body {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .flex {
+        display: flex;
+      }
+      .img {
+        background-color: orange;
+
+        border-radius: 10px;
+      }
+      .half-background-color {
+        position:relative;
+      }
+      .half-background-color::before {
+        width: 100%;
+        height: 200px;
+        left:0;
+        top:0;
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 방법 1 : 컨텐츠 구조에 상관없이 아무 배경(색이나 이미지)이나 넣는 방법.-->
+    <!-- background-image는 background-position, size 등의 속성으로 원하는 부분에만 배경을 넣을 수 있지만, -->
+    <!-- background-color는 해당 영역 전체에 채워지기 때문에 가상요소(bofore)를 사용함. -->
+    <div class="flex half-background-color" style="padding:60px;">
+
+      <div>
+        <div class="img" style="width: 300px;height: 300px;"></div>
+      </div>
+
+      <div>
+        <div style="padding-top:60px; padding-left: 60px; color:white;">
+          <div >
+            마디아 수업<br>
+            오프라인 시즌3 <span>~40%</span>
+          </div>
+          <div>
+            이미지가 깨져서 무슨말인지 안보이네
+          </div>
+        </div>
+
+        <div class="flex" style="padding-top:30px; padding-left: 60px;">
+          <div class="img" style="width: 100px;height: 100px; margin-right:10px;"></div>
+          <div class="img" style="width: 100px;height: 100px; margin-right:10px;"></div>
+          <div class="img" style="width: 100px;height: 100px; margin-right:10px;"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 방법 2 : 마침 배경이 파란 띠모양이라서 가능한 방법. -->
+    <div>
+      <!-- 배경색과 높이(200)를 준 다음 -->
+      <div style="background-color: blue; height:200px;">
+        <div class="flex" style="padding:60px;">
+          <!-- 이미지 높이(300)를 강제로 오버플로우 시킴 200 < 300 -->
+          <div class="img" style="width: 300px;height: 300px;"></div>
+          <div style="padding-top:60px; padding-left: 60px; color:white;">
+            <div >
+              마디아 수업<br>
+              오프라인 시즌3 <span>~40%</span>
+            </div>
+            <div>
+              이미지가 깨져서 무슨말인지 안보이네
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- padding-left를 넉넉히 주면 끝. -->
+      <div class="flex" style="padding-top:30px; padding-left: 420px;">
+        <div class="img" style="width: 100px;height: 100px; margin-right:10px;"></div>
+        <div class="img" style="width: 100px;height: 100px; margin-right:10px;"></div>
+        <div class="img" style="width: 100px;height: 100px; margin-right:10px;"></div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
